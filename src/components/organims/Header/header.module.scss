@@ -1,0 +1,91 @@
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/typography" as typography;
+@use "/src/styles/base/breakpoints" as breakpoints;
+
+.header {
+  width: 100%;
+  position: absolute;
+  z-index: 1000;
+  transition: 0.2s;
+  padding: 0 2%;
+  &__container {
+    width: 100%;
+    height: 5rem;
+    @include utilities.flexbox-params(flex, center, space-between);
+    @include breakpoints.medium {
+      @include utilities.grid-params(grid, 2.8fr 0.1fr 0.1fr, auto, auto);
+    }
+  }
+  &__options {
+    @include utilities.flexbox-params(flex, flex-end, auto);
+    gap: 2.5rem;
+    @include breakpoints.medium {
+      gap: 1rem;
+    }
+  }
+  &__links {
+    list-style: none;
+    padding: 0;
+    & > div {
+      @include utilities.flexbox-params(flex, center, auto);
+      gap: 2rem;
+    }
+    @include breakpoints.medium {
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background: colors.$secondary;
+      transition: 1s;
+      @include utilities.flexbox-params(flex, center, center);
+      & > div {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 50%;
+      }
+    }
+    & a {
+      cursor: pointer;
+      transition: 0.4s;
+      font-family: typography.$secondary10;
+      @media (hover: hover) {
+        &:hover {
+          color: colors.$primary;
+        }
+      }
+      &:active {
+        color: #{colors.$primary}#{"30"};
+      }
+      @include breakpoints.medium {
+        font-size: 45px;
+        font-weight: bold;
+      }
+    }
+  }
+  &__menuicon {
+    transition: 0.4s;
+    cursor: pointer;
+    @media (hover: hover) {
+      &:hover {
+        color: colors.$primary;
+      }
+    }
+    &:active {
+      color: #{colors.$primary}#{"30"};
+    }
+    @include breakpoints.medium {
+      margin-left: 2rem;
+    }
+    @include breakpoints.small {
+      margin-left: 1rem;
+    }
+  }
+}
+
+:export {
+  headerBg: colors.$secondary;
+  headerBgGradient: #{colors.$secondary}#{"ce"};
+}

@@ -1,0 +1,38 @@
+@use "/src/styles/base/breakpoints" as breakpoints;
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/utilities" as utilities;
+
+.player {
+  @include utilities.flexbox-params(flex, center, center);
+  gap: 0.3rem;
+  cursor: pointer;
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    @include utilities.flexbox-params(flex, center, center);
+    & > div {
+      position: absolute;
+      transform: rotateY(30deg);
+      top: 0;
+      font-size: 35px;
+      line-height: 35px;
+      font-weight: bold;
+      color: #ff0000;
+      text-align: center;
+    }
+  }
+  &__dots {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    & li {
+      margin: 0 0.5px;
+      width: 2.5px;
+      height: 3px;
+      background: colors.$primary;
+    }
+  }
+}

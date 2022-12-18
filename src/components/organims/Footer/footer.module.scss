@@ -1,0 +1,59 @@
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/breakpoints" as breakpoints;
+
+.footer {
+  width: 100%;
+  padding: 3rem 0;
+  @include utilities.flexbox-params(flex, center, space);
+  flex-direction: column;
+  @include breakpoints.medium {
+    padding: 1.5rem 0;
+  }
+  & img {
+    width: 8rem;
+    @include breakpoints.medium {
+      width: 5.5rem;
+    }
+  }
+  & hr {
+    width: 98%;
+    max-width: calc(breakpoints.$screen-xxl + 10rem);
+    background: colors.$tertiary;
+    border-color: transparent;
+    margin-bottom: 1.5rem;
+  }
+  & p {
+    text-align: center;
+    color: colors.$tertiary;
+    @include breakpoints.medium {
+      font-size: 12px;
+    }
+  }
+  &__top {
+    @include utilities.flexbox-params(flex, center, space-between);
+  }
+  &__networks {
+    @include utilities.flexbox-params(flex, auto, auto);
+    gap: 0.7rem;
+    & > a {
+      color: colors.$text;
+      transition: 0.4s;
+      cursor: pointer;
+      @media (hover: hover) {
+        &:hover {
+          color: colors.$primary;
+        }
+      }
+      &:active {
+        color: #{colors.$primary}#{"30"};
+      }
+      & svg {
+        font-size: 1.3rem;
+        @include breakpoints.medium {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/typography" as typography;
+
+.title {
+  & h1,
+  h2,
+  h4 {
+    color: colors.$text;
+    font-family: typography.$primary;
+  }
+  & h1 {
+    font-size: 65px;
+    line-height: 70px;
+    letter-spacing: 3px;
+    font-weight: 100;
+  }
+  & h2 {
+    font-size: 35px;
+    line-height: 35px;
+    letter-spacing: 2px;
+    font-weight: 50;
+    color: colors.$primary;
+  }
+  & h4 {
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: 30;
+  }
+}

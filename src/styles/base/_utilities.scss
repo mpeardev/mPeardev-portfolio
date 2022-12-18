@@ -1,0 +1,12 @@
+@mixin flexbox-params($display, $align, $justify) {
+  display: $display;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin grid-params($display, $columns, $column, $row) {
+  display: $display;
+  grid-template-columns: $columns;
+  column-gap: $column;
+  row-gap: $row;
+}

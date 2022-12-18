@@ -1,0 +1,25 @@
+/* Bebas Neue */
+$primary: "BebasNeue-Regular";
+
+@font-face {
+  font-family: $primary;
+  src: url("/src/styles/fonts/Bebas_Neue/BebasNeue-Regular.ttf");
+}
+
+/* Open Sans */
+$secondary10: "OpenSans-Light";
+$secondary20: "OpenSans-Regular";
+$secondary30: "OpenSans-Medium";
+
+@font-face {
+  font-family: $secondary10;
+  src: url("/src/styles/fonts/Open_Sans/OpenSans-Light.ttf");
+}
+@font-face {
+  font-family: $secondary20;
+  src: url("/src/styles/fonts/Open_Sans/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: $secondary30;
+  src: url("/src/styles/fonts/Open_Sans/OpenSans-Medium.ttf");
+}

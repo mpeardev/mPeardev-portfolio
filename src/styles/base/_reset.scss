@@ -1,0 +1,50 @@
+@use "./colors" as colors;
+@use "./typography" as typography;
+
+*,
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: colors.$secondary;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: colors.$text;
+  font-family: typography.$secondary20;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+input,
+textarea,
+button,
+select,
+div,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+
+// CUSTOM-SCROLLBAR
+body::-webkit-scrollbar {
+  width: 7px;
+}
+body::-webkit-scrollbar-track {
+  background: colors.$secondary;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: colors.$primary;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-button {
+  display: none;
+}

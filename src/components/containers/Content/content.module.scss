@@ -1,0 +1,11 @@
+@use "/src/styles/base/breakpoints" as breakpoints;
+
+.content {
+  width: 100%;
+  max-width: breakpoints.$screen-xxl;
+  margin: 0 auto;
+  padding: 0 2%;
+  @include breakpoints.medium {
+    padding: 0 4%;
+  }
+}

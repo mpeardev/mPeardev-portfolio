@@ -1,0 +1,58 @@
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/typography" as typography;
+
+.button {
+  width: auto;
+  height: auto;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  @include utilities.flexbox-params(flex, center, center);
+  gap: 0.5rem;
+  @media (hover: hover) {
+    &:hover {
+      background: #{colors.$primary}#{"80"};
+      color: colors.$text;
+    }
+  }
+  & a {
+    text-decoration: none;
+  }
+}
+
+.primary {
+  border-color: colors.$primary;
+  background: colors.$primary;
+  color: #000;
+  &:active {
+    background: #{colors.$primary}#{"30"};
+  }
+}
+
+.secondary {
+  border-color: colors.$primary;
+  background: #{colors.$primary}#{"30"};
+  color: colors.$primary;
+  backdrop-filter: blur(5px);
+  &:active {
+    background: #{colors.$primary}#{"50"};
+  }
+}
+
+.tertiary {
+  border-color: colors.$secondary;
+  background: colors.$secondary;
+  color: colors.$text;
+  @media (hover: hover) {
+    &:hover {
+      background: #{colors.$secondary}#{"ae"};
+    }
+  }
+  &:active {
+    background: #{colors.$secondary}#{"cb"};
+  }
+}
