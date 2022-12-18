@@ -42,7 +42,7 @@ export function Loader({ breakpoint }) {
         .to(circle1.current, 4, {
           delay: 0.4,
           x: breakpoint <= 768 ? "0" : "100%",
-          scale: 1.2,
+          scale: 1,
           ease: Expo.easeInOut,
           opacity: breakpoint <= 768 ? 0 : 0.25,
         })
@@ -52,7 +52,7 @@ export function Loader({ breakpoint }) {
           {
             delay: 0.9,
             x: breakpoint <= 768 ? "0" : "100%",
-            scale: 1.4,
+            scale: 1.6,
             ease: Expo.easeInOut,
             opacity: breakpoint <= 768 ? 0 : 0.25,
           },
