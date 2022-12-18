@@ -6,9 +6,10 @@
 .header {
   width: 100%;
   position: absolute;
-  z-index: 1000;
+  z-index: 1;
   transition: 0.2s;
   padding: 0 2%;
+  z-index: 1000;
   &__container {
     width: 100%;
     height: 5rem;
@@ -27,6 +28,7 @@
   &__links {
     list-style: none;
     padding: 0;
+    opacity: 0;
     & > div {
       @include utilities.flexbox-params(flex, center, auto);
       gap: 2rem;
@@ -37,9 +39,9 @@
       position: fixed;
       top: 0;
       left: 0;
-      z-index: 1000;
       background: colors.$secondary;
       transition: 1s;
+      z-index: 1000;
       @include utilities.flexbox-params(flex, center, center);
       & > div {
         width: 100%;
@@ -66,6 +68,7 @@
     }
   }
   &__menuicon {
+    opacity: 0;
     transition: 0.4s;
     cursor: pointer;
     @media (hover: hover) {

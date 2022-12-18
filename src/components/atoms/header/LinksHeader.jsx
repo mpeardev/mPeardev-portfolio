@@ -1,16 +1,15 @@
 import gsap, { Expo } from "gsap";
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import classes from "../../organims/Header/header.module.scss";
 
-export function LinksHeader({ show }) {
+export function LinksHeader({ show, breakpoint }) {
   const links = useRef();
 
   useLayoutEffect(() => {
-    gsap.from(links.current, 3, {
+    gsap.to(links.current, 3, {
       delay: 8.5,
-      opacity: 0,
-      y: 20,
+      opacity: 1,
       ease: Expo.easeInOut,
     });
   }, []);

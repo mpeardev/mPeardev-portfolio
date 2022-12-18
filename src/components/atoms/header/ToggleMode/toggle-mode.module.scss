@@ -17,7 +17,7 @@ $shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
       width: $size * 2;
       height: $size;
       background: rgba($lightColor, 0.5);
-      border-radius: $size / 2;
+      border-radius: calc($size / 2);
       box-shadow: $shadow;
       cursor: pointer;
       transition: $transition;

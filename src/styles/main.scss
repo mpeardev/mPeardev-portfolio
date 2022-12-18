@@ -57,7 +57,10 @@
   transform: translate(-50%, -50%);
   position: absolute;
   opacity: 0.3;
-  width: 30rem;
+  width: 26rem;
+  @include breakpoints.medium {
+    width: 18rem;
+  }
 }
 
 .ringOne img {

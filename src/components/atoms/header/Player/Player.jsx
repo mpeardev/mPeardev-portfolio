@@ -48,6 +48,7 @@ export const Player = () => {
       opacity: 0,
       y: 20,
       ease: Expo.easeInOut,
+      zIndex: 0,
     });
   }, []);
 

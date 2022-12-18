@@ -23,7 +23,7 @@ export function Header({ breakpoint }) {
       <Content>
         <div className={classes.header__container}>
           <LogoHeader breakpoint={breakpoint} />
-          <LinksHeader show={show} />
+          <LinksHeader show={show} breakpoint={breakpoint} />
           <div className={classes.header__options}>
             <ToggleMode />
             <Player />

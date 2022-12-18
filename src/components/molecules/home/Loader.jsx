@@ -7,55 +7,59 @@ export function Loader({ breakpoint }) {
   const circle1 = useRef();
   const circle2 = useRef();
 
-  useLayoutEffect(() => {
-    const x = new TimelineMax();
-    // frame
-    x.to(frame.current, 4, {
-      delay: 6.6,
-      top: "-100vh",
-      ease: Expo.easeInOut,
-    }).to(frame.current, 4, {
-      display: "none",
-    });
+  useEffect(() => {
+    if (breakpoint) {
+      const x = new TimelineMax();
+      // frame
+      x.to(frame.current, 4, {
+        delay: 6.6,
+        top: "-100vh",
+        ease: Expo.easeInOut,
+      }).to(frame.current, 4, {
+        display: "none",
+      });
 
-    // circles
-    let t1 = new TimelineMax();
+      // circles
+      let t1 = new TimelineMax();
 
-    t1.from(circle1.current, 4, {
-      delay: 0.4,
-      opacity: 0,
-      y: "50%",
-      ease: Expo.easeInOut,
-    })
-      .from(
-        circle2.current,
-        4,
-        {
-          delay: 0.9,
-          opacity: 0,
-          y: "50%",
-          ease: Expo.easeInOut,
-        },
-        "-=5"
-      )
-      .to(circle1.current, 4, {
+      t1.from(circle1.current, 4, {
         delay: 0.4,
-        x: "100%",
-        scale: breakpoint <= 768 ? 4 : 1.2,
+        opacity: 0,
+        y: "50%",
         ease: Expo.easeInOut,
       })
-      .to(
-        circle2.current,
-        4,
-        {
-          delay: 0.9,
-          x: "100%",
-          scale: breakpoint <= 768 ? 4 : 1.2,
+        .from(
+          circle2.current,
+          4,
+          {
+            delay: 0.9,
+            opacity: 0,
+            y: "50%",
+            ease: Expo.easeInOut,
+          },
+          "-=5"
+        )
+        .to(circle1.current, 4, {
+          delay: 0.4,
+          x: breakpoint <= 768 ? "0" : "100%",
+          scale: 1.2,
           ease: Expo.easeInOut,
-        },
-        "-=5"
-      );
-  }, []);
+          opacity: breakpoint <= 768 ? 0 : 0.25,
+        })
+        .to(
+          circle2.current,
+          4,
+          {
+            delay: 0.9,
+            x: breakpoint <= 768 ? "0" : "100%",
+            scale: 1.4,
+            ease: Expo.easeInOut,
+            opacity: breakpoint <= 768 ? 0 : 0.25,
+          },
+          "-=5"
+        );
+    }
+  }, [breakpoint]);
   return (
     <>
       <div className="loading-screen" ref={frame}></div>
