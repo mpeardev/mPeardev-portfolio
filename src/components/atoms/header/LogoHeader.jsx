@@ -6,21 +6,21 @@ export function LogoHeader({ breakpoint }) {
       <Link to="/">
         {breakpoint <= 640 && (
           <img
-            src="../../../../src/assets/img/icon/icon-dark.png"
+            src="/icon/200x200/icon-dark.png"
             alt="logo"
             style={{ width: "3rem" }}
           />
         )}
         {breakpoint <= 1024 && breakpoint > 640 && (
           <img
-            src="../../../../src/assets/img/logo/logo-notebook-dark.png"
+            src="/logo/logo-notebook-dark.png"
             alt="logo"
             style={{ width: "7rem" }}
           />
         )}
         {breakpoint >= 1280 && (
           <img
-            src="../../../../src/assets/img/logo/logo-dark.png"
+            src="/logo/logo-dark.png"
             alt="logo"
             style={{ width: "10rem" }}
           />
