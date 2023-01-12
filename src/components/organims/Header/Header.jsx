@@ -7,13 +7,10 @@ import {
   MenuIconHeader,
   ToggleMode,
   Player,
-  ComingModal,
 } from "../../../components";
-import { useModal } from "../../../hooks/useModal";
 
-export function Header({ breakpoint }) {
+export function Header({ breakpoint, openComingModal }) {
   const [show, setShow] = useState();
-  const [isOpenComingModal, openComingModal, closeComingModal] = useModal();
 
   useEffect(() => {
     if (breakpoint > 640) {
@@ -74,12 +71,6 @@ export function Header({ breakpoint }) {
           </motion.div>
         </div>
       </header>
-      {isOpenComingModal && (
-        <ComingModal
-          isOpenComingModal={isOpenComingModal}
-          closeComingModal={closeComingModal}
-        />
-      )}
     </>
   );
 }

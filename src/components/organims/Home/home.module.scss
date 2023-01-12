@@ -21,6 +21,10 @@
     margin: 0 auto;
     @include utilities.grid-params(grid, 1fr 1fr, auto, auto);
     align-items: center;
+    @include breakpoints.medium {
+      @include utilities.grid-params(grid, 1fr, auto, auto);
+      padding: 0 4%;
+    }
   }
   &__about {
     width: 100%;
@@ -118,6 +122,9 @@
   &__image {
     @include utilities.flexbox-params(flex, center, center);
     margin-bottom: 8%;
+    @include breakpoints.medium {
+      display: none;
+    }
     & svg {
       filter: url("#filter-broken");
     }

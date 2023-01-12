@@ -1,24 +1,11 @@
-import { Home, ComingModal } from "../../components";
-import { useModal } from "../../hooks/useModal";
+import { Home } from "../../components";
 
-export function HomePage({ breakpoint }) {
-  const [isOpenComingModal, openComingModal, closeComingModal] = useModal();
-
+export function HomePage({ breakpoint, openComingModal }) {
   return (
     <>
       <div>
-        <Home
-          breakpoint={breakpoint}
-          isOpenModal={isOpenComingModal}
-          openComingModal={openComingModal}
-        />
+        <Home breakpoint={breakpoint} openComingModal={openComingModal} />
       </div>
-      {isOpenComingModal && (
-        <ComingModal
-          isOpenComingModal={isOpenComingModal}
-          closeComingModal={closeComingModal}
-        />
-      )}
     </>
   );
 }

@@ -1,33 +1,28 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import classes from "./toggle-mode.module.scss";
 
 export function ToggleMode({ openComingModal }) {
   const check = useRef(null);
-  const [state, setState] = useState();
 
   /* Capture default color mode
     checked === true: dark
     checked === false: light
   */
-  useEffect(() => {
-    check.current.checked = true;
-    const x = check.current.checked;
-    setState(x);
-  }, []);
-
-  // useEffect(() => {
-  //   console.log(state);
-  // }, [state]);
 
   // modify
   const handleCheck = () => {
-    setState(!state);
+    !check.current.checked;
   };
 
   return (
     <div className={classes.toggle}>
-      <input type="checkbox" id="toggle" ref={check} />
-      {/* <label htmlFor="toggle" onClick={handleCheck}></label> */}
+      <input
+        type="checkbox"
+        id="toggle"
+        ref={check}
+        checked={true}
+        onChange={handleCheck}
+      />
       <label htmlFor="toggle" onClick={openComingModal}></label>
     </div>
   );
