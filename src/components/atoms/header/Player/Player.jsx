@@ -1,16 +1,13 @@
 import anime from "animejs/lib/anime.es.js";
-import gsap, { Expo } from "gsap";
-import { useState, useRef, useEffect, useLayoutEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { MdHeadphones } from "../../icons";
 import classes from "./player.module.scss";
 
 const ticks = Array.from(Array(8));
 
-export const Player = () => {
-  const [playing, setPlaying] = useState(true);
+export const Player = ({ openComingModal }) => {
+  const [playing, setPlaying] = useState();
   const animation = useRef(null);
-
-  const player = useRef();
 
   const handleClick = () => {
     playing ? mute() : animation.current.play();
@@ -42,18 +39,8 @@ export const Player = () => {
     }
   }, []);
 
-  useLayoutEffect(() => {
-    gsap.from(player.current, 3, {
-      delay: 8.7,
-      opacity: 0,
-      y: 20,
-      ease: Expo.easeInOut,
-      zIndex: 0,
-    });
-  }, []);
-
   return (
-    <div className={classes.player} onClick={handleClick} ref={player}>
+    <div className={classes.player} onClick={openComingModal}>
       <div className={classes.player__icon}>
         {!playing && <div>/</div>}
         <MdHeadphones size="1.5rem" />

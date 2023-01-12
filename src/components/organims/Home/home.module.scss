@@ -12,26 +12,19 @@
   &__content {
     width: 100%;
     height: calc(100vh - 5rem);
-    position: relative;
-    margin: 0 auto;
-    z-index: 2;
-    top: 0;
   }
   &__main {
     width: 100%;
     height: 100%;
-    max-width: 1536px;
+    max-width: 1800px;
     padding: 0 2%;
     margin: 0 auto;
-    @include utilities.flexbox-params(flex, center, auto);
+    @include utilities.grid-params(grid, 1fr 1fr, auto, auto);
+    align-items: center;
   }
   &__about {
     width: 100%;
     margin-top: -10%;
-    max-width: 50rem;
-    & h1 {
-      letter-spacing: 10px;
-    }
     & h4 {
       margin-top: 0.5rem;
       @include breakpoints.medium {
@@ -51,7 +44,6 @@
         padding-right: 3rem;
         @include breakpoints.xl-large {
           font-size: 15px;
-          // letter-spacing: 1px;
         }
       }
       & a {
@@ -79,15 +71,16 @@
     width: auto;
     height: 100%;
     position: absolute;
-    top: -5rem;
+    // top: -5rem;
+    top: 0;
     right: 0;
+    padding-right: 2%;
     @include utilities.flexbox-params(flex, center, center);
     gap: 3rem;
     flex-direction: column;
     @include breakpoints.medium {
       height: auto;
       left: 10%;
-      // right: auto;
       top: auto;
       bottom: 4rem;
       @include utilities.flexbox-params(flex, flex-end, flex-end);
@@ -111,7 +104,8 @@
   &__footer {
     width: 100%;
     position: absolute;
-    bottom: 3%;
+    bottom: 2%;
+    padding: 0 2%;
     left: 0;
     @include utilities.flexbox-params(flex, center, space-between);
     @include breakpoints.medium {
@@ -121,6 +115,20 @@
       flex-direction: column;
     }
   }
+  &__image {
+    @include utilities.flexbox-params(flex, center, center);
+    margin-bottom: 8%;
+    & svg {
+      filter: url("#filter-broken");
+    }
+    & g {
+      transform-origin: center;
+    }
+  }
+}
+
+#main {
+  transform-origin: center;
 }
 
 :export {

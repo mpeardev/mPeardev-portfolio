@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Footer, Gsap, Header } from "./components";
+import { Header } from "./components";
 import { breakpointObserver } from "./config/breakpoint/breakpointObserver";
 import { breakpoints } from "./config/breakpoint/breakpoints";
 import { AppRouter } from "./routers/AppRouter";

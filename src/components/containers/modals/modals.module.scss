@@ -10,15 +10,15 @@
   z-index: 10000000;
   top: 0;
   left: 0;
-  background: #{colors.$secondary}#{"cb"};
+  background: #00000084;
   @include utilities.flexbox-params(flex, center, center);
   &__container {
     position: relative;
     width: 80vw;
     height: auto;
     min-height: 15rem;
-    background: #{colors.$tertiary}#{"cb"};
-    backdrop-filter: blur(2px);
+    background: #00000084;
+    backdrop-filter: blur(4px);
     border-radius: 12px;
     overflow-y: auto;
     @include utilities.flexbox-params(flex, center, auto);

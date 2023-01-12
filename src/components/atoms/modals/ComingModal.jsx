@@ -1,4 +1,5 @@
-import { DefaultModal } from "../../../components";
+import { DefaultModal, Subtitle } from "../../../components";
+import { CiCircleAlert } from "../icons";
 
 export function ComingModal({ isOpenComingModal, closeComingModal }) {
   return (
@@ -10,9 +11,12 @@ export function ComingModal({ isOpenComingModal, closeComingModal }) {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          flexDirection: "column",
+          gap: "1rem",
         }}
       >
-        <h1>Proximamente</h1>
+        <CiCircleAlert size={"4em"} color={"#fff"} />
+        <Subtitle title="Próximamente" />
       </div>
     </DefaultModal>
   );

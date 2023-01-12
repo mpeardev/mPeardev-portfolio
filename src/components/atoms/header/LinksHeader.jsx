@@ -1,23 +1,10 @@
-import gsap, { Expo } from "gsap";
-import { useEffect, useLayoutEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import classes from "../../organims/Header/header.module.scss";
 
-export function LinksHeader({ show, breakpoint }) {
-  const links = useRef();
-
-  useLayoutEffect(() => {
-    gsap.to(links.current, 3, {
-      delay: 8.5,
-      opacity: 1,
-      ease: Expo.easeInOut,
-    });
-  }, []);
-
+export function LinksHeader({ show, openComingModal }) {
   return (
     <div
       className={classes.header__links}
-      ref={links}
       style={{
         top: show ? "5rem" : "-100vh",
       }}
@@ -29,8 +16,20 @@ export function LinksHeader({ show, breakpoint }) {
         >
           Home
         </NavLink>
-        <a>Sobre mi</a>
-        <a>Proyectos</a>
+        {/* <NavLink
+          to="/about"
+          className={({ isActive }) => (isActive ? "link-active" : "link")}
+        >
+          Sobre mi
+        </NavLink> */}
+        <a onClick={openComingModal}>Sobre mi</a>
+        {/* <NavLink
+          to="/projects"
+          className={({ isActive }) => (isActive ? "link-active" : "link")}
+        >
+          Proyectos
+        </NavLink> */}
+        <a onClick={openComingModal}>Proyectos</a>
       </div>
     </div>
   );
