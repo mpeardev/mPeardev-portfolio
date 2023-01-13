@@ -16,7 +16,7 @@ export function ComingModal({ isOpenComingModal, closeComingModal }) {
         }}
       >
         <CiCircleAlert size={"4em"} color={"#fff"} />
-        <Subtitle title="Próximamente" />
+        <Subtitle title="actualizando..." />
       </div>
     </DefaultModal>
   );

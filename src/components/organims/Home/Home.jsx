@@ -1,5 +1,6 @@
 import classes from "./home.module.scss";
 import { motion } from "framer-motion";
+import Typewriter from "typewriter-effect";
 import {
   PageContainer,
   Title,
@@ -25,13 +26,19 @@ export function Home({ breakpoint, openComingModal }) {
             >
               <div className={classes.home__about}>
                 <div>
-                  <Title
-                    title={"mPeardev"}
-                    size={breakpoint >= 1280 ? "80px" : "60px"}
-                  />
+                  <Title size={breakpoint >= 1280 ? "80px" : "60px"}>
+                    <Typewriter
+                      options={{
+                        autoStart: true,
+                        loop: true,
+                        delay: 100,
+                        strings: ["Mirko Peramás", "mpeardev"],
+                      }}
+                    />
+                  </Title>
                 </div>
                 <div>
-                  <Subtitle title={"software developer"} />
+                  <Subtitle title={"frontend developer"} />
                 </div>
                 <div className={classes.home__aboutResume}>
                   <p>

@@ -21,7 +21,7 @@ export function FooterHome() {
         }}
         animate={{
           y: 0,
-          transition: { type: "spring", duration: 0.5, delay: 0.3 },
+          transition: { type: "spring", duration: 0.5, delay: 1.3 },
         }}
       >
         Mirko Peramás | mPeardev
