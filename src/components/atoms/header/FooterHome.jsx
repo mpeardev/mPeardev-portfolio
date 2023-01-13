@@ -13,7 +13,7 @@ export function FooterHome() {
           transition: { type: "spring", duration: 1.5, delay: 0.5 },
         }}
       >
-        &copy;{new Date().getFullYear()} All rights reserved | Demo
+        &copy;{new Date().getFullYear()} All rights reserved
       </motion.p>
       <motion.p
         initial={{
@@ -24,7 +24,7 @@ export function FooterHome() {
           transition: { type: "spring", duration: 0.5, delay: 1.3 },
         }}
       >
-        Mirko Peramás | mPeardev
+        mPeardev - demo version
       </motion.p>
     </div>
   );

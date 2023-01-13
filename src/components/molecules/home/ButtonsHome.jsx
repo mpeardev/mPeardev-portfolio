@@ -1,8 +1,4 @@
-import {
-  ComingModal,
-  PrimaryButton,
-  SecondaryButton,
-} from "../../../components";
+import { PrimaryButton, SecondaryButton } from "../../../components";
 import classes from "../../organims/Home/home.module.scss";
 
 export function ButtonsHome({ breakpoint, openComingModal }) {

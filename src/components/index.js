@@ -1,7 +1,5 @@
 /* CONTAINERS */
 export * from "./containers/PageContainer";
-export * from "./containers/gradients/LinearGradient";
-export * from "./containers/gradients/RadialGradient";
 export * from "./containers/Content/Content";
 export * from "./containers/modals/DefaultModal";
 
