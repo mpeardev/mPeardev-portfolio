@@ -45,10 +45,9 @@ export function Home({ breakpoint, openComingModal }) {
                     Hola! me llamo Mirko, aficionado del desarrollo web y la
                     tecnología. Actualmente me especializo como desarrollador
                     Frontend, con experiencia en creación de templates y
-                    aplicaciones web, encontrándome en permanente y constante
-                    aprendizaje para añadirle el mayor valor a mis proyectos.{" "}
-                    <a onClick={openComingModal}>Aquí</a> puedes saber un poco
-                    más sobre mí y revisar algunos de mis proyectos.
+                    aplicaciones web.<a onClick={openComingModal}> Aquí</a>{" "}
+                    puedes saber un poco más sobre mí y revisar algunos de mis
+                    proyectos y colaboraciones.
                   </p>
                 </div>
                 <ButtonsHome

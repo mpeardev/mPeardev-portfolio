@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import classes from "./modals.module.scss";
-import { TfiClose } from "../../atoms/icons";
+import { TfiClose } from "../../../ui/icons";
 import { useModalSize } from "../../../hooks/useModalSize";
 
 export function DefaultModal({ children, closeModal, size, title = "" }) {

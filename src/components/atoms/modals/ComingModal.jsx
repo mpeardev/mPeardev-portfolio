@@ -1,5 +1,5 @@
 import { DefaultModal, Subtitle } from "../../../components";
-import { CiCircleAlert } from "../icons";
+import { CiCircleAlert } from "../../../ui/icons";
 
 export function ComingModal({ isOpenComingModal, closeComingModal }) {
   return (

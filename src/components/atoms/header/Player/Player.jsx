@@ -1,6 +1,6 @@
 import anime from "animejs/lib/anime.es.js";
 import { useState, useRef, useEffect } from "react";
-import { MdHeadphones } from "../../icons";
+import { MdHeadphones } from "../../../../ui/icons";
 import classes from "./player.module.scss";
 
 const ticks = Array.from(Array(8));

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import classes from "../../organims/Home/home.module.scss";
-import { BsLinkedin, BsGithub, BsWhatsapp } from "../../atoms/icons";
+import { BsLinkedin, BsGithub, BsWhatsapp } from "/src/ui/icons";
 
 export function SocialIconsHome({ breakpoint }) {
   return (

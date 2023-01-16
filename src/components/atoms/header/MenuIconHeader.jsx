@@ -1,5 +1,5 @@
 import classes from "../../organims/Header/header.module.scss";
-import { AiOutlineMenu } from "../icons";
+import { AiOutlineMenu } from "../../../ui/icons";
 
 export function MenuIconHeader({ breakpoint, show, setShow }) {
   return (

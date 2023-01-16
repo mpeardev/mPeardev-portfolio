@@ -24,7 +24,7 @@ export function FooterHome() {
           transition: { type: "spring", duration: 0.5, delay: 1.3 },
         }}
       >
-        mPeardev - demo version
+        mirkoperamas@gmail.com
       </motion.p>
     </div>
   );
