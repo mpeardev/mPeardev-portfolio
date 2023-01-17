@@ -1,7 +1,7 @@
 import classes from "../header.module.scss";
 import { AiOutlineMenu } from "/src/ui/icons";
 
-export function MenuIconHeader({ breakpoint, show, setShow }) {
+export function MenuIcon({ breakpoint, show, setShow }) {
   return (
     <div
       className={classes.header__menuicon}

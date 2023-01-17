@@ -1,13 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import classes from "./header.module.scss";
-import {
-  LogoHeader,
-  LinksHeader,
-  ToggleMode,
-  Player,
-  MenuIconHeader,
-} from "./components";
+import { Logo, Links, ToggleMode, Player, MenuIcon } from "./components";
 
 export function Header({ breakpoint, openComingModal }) {
   const [show, setShow] = useState();
@@ -31,7 +25,7 @@ export function Header({ breakpoint, openComingModal }) {
               transition: { type: "spring", duration: 1.5, delay: 0.3 },
             }}
           >
-            <LogoHeader breakpoint={breakpoint} />
+            <Logo breakpoint={breakpoint} />
           </motion.div>
 
           <motion.div
@@ -43,7 +37,7 @@ export function Header({ breakpoint, openComingModal }) {
               transition: { type: "spring", duration: 1.5, delay: 0.4 },
             }}
           >
-            <LinksHeader
+            <Links
               show={show}
               breakpoint={breakpoint}
               openComingModal={openComingModal}
@@ -62,11 +56,7 @@ export function Header({ breakpoint, openComingModal }) {
             <div className={classes.header__options}>
               <ToggleMode />
               <Player />
-              <MenuIconHeader
-                breakpoint={breakpoint}
-                show={show}
-                setShow={setShow}
-              />
+              <MenuIcon breakpoint={breakpoint} show={show} setShow={setShow} />
             </div>
           </motion.div>
         </div>

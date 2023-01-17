@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import classes from "../header.module.scss";
 
-export function LinksHeader({ show, openComingModal }) {
+export function Links({ show, openComingModal }) {
   return (
     <div
       className={`theme-menu-bg ${classes.header__links}`}
