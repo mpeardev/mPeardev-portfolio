@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { ComingModal, Header } from "./components";
 import { breakpointObserver } from "./config/breakpoint/breakpointObserver";
 import { breakpoints } from "./config/breakpoint/breakpoints";
 import { useModal } from "./hooks/useModal";
+import { Header, ComingModal } from "./ui/components/";
 import { AppRouter } from "./routers/AppRouter";
 
 export function MPeardevApp() {

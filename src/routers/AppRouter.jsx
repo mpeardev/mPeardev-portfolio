@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import { HomePage, AboutPage, ProjectsPage } from "../components";
+// import { HomePage, AboutPage, ProjectsPage } from "../components";
+import { HomePage } from "../modules/Home";
 
 export function AppRouter({ breakpoint, openComingModal }) {
   return (
@@ -14,8 +15,8 @@ export function AppRouter({ breakpoint, openComingModal }) {
             />
           }
         />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
+        {/* <Route path="/about" element={<AboutPage />} /> */}
+        {/* <Route path="/projects" element={<ProjectsPage />} /> */}
       </Routes>
     </>
   );

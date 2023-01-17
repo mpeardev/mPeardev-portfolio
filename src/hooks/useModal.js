@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { disableScroll, enableScroll } from "./enableDisableScroll";
+import { disableScroll, enableScroll } from "../helpers/enableDisableScroll";
 
 export function useModal(initialValue = false) {
   const [isOpen, setIsOpen] = useState(initialValue);
