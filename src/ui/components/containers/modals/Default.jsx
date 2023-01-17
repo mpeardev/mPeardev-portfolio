@@ -15,7 +15,7 @@ export function Default({ children, closeModal, size, title = "" }) {
   return (
     <div className={classes.modal} onClick={closeModal}>
       <div
-        className={classes.modal__container}
+        className={`theme-modal-bg ${classes.modal__container}`}
         onClick={disabledClose}
         style={styleModal}
       >

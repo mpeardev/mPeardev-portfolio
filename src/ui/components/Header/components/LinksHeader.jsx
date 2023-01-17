@@ -4,7 +4,7 @@ import classes from "../header.module.scss";
 export function LinksHeader({ show, openComingModal }) {
   return (
     <div
-      className={classes.header__links}
+      className={`theme-menu-bg ${classes.header__links}`}
       style={{
         top: show ? "5rem" : "-100vh",
       }}

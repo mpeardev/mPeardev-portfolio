@@ -17,11 +17,10 @@
     width: 80vw;
     height: auto;
     min-height: 15rem;
-    background: #00000084;
     backdrop-filter: blur(4px);
     border-radius: 12px;
     overflow-y: auto;
-    @include utilities.flexbox-params(flex, center, auto);
+    @include utilities.flexbox-params(flex, center, center);
     flex-direction: column;
     padding: 3% 1.5%;
     & > h3 {

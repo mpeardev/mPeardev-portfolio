@@ -76,3 +76,14 @@
     background: t("primary");
   }
 }
+
+.theme-modal-bg {
+  @include themed() {
+    background: t("modal-bg");
+  }
+}
+.theme-menu-bg {
+  @include themed() {
+    background: t("menu-bg");
+  }
+}
