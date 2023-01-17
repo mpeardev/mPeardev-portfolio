@@ -2,8 +2,13 @@
 @use "/src/styles/base/colors" as colors;
 @use "/src/styles/base/typography" as typography;
 @use "/src/styles/base/breakpoints" as breakpoints;
+@import "/src/styles/base/theme";
 
 .header {
+  @include themed() {
+    color: t("text");
+    background: t("bg");
+  }
   width: 100%;
   position: absolute;
   z-index: 1;
@@ -38,7 +43,7 @@
       position: fixed;
       top: 0;
       left: 0;
-      background: colors.$secondary;
+      // background: colors.$secondary;
       transition: 1s;
       z-index: 1000;
       @include utilities.flexbox-params(flex, center, center);
@@ -49,17 +54,7 @@
       }
     }
     & a {
-      cursor: pointer;
-      transition: 0.4s;
-      font-family: typography.$secondary10;
-      @media (hover: hover) {
-        &:hover {
-          color: colors.$primary;
-        }
-      }
-      &:active {
-        color: #{colors.$primary}#{"30"};
-      }
+      font-family: typography.$secondary20;
       @include breakpoints.medium {
         font-size: 45px;
         font-weight: bold;
@@ -69,14 +64,6 @@
   &__menuicon {
     transition: 0.4s;
     cursor: pointer;
-    @media (hover: hover) {
-      &:hover {
-        color: colors.$primary;
-      }
-    }
-    &:active {
-      color: #{colors.$primary}#{"30"};
-    }
     @include breakpoints.medium {
       margin-left: 2rem;
     }
@@ -87,6 +74,6 @@
 }
 
 :export {
-  headerBg: colors.$secondary;
-  headerBgGradient: #{colors.$secondary}#{"ce"};
+  // headerBg: colors.$secondary;
+  // headerBgGradient: #{colors.$secondary}#{"ce"};
 }

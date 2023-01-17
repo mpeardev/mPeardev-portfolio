@@ -13,7 +13,7 @@ export function MPeardevApp() {
     breakpointObserver(breakpoints, isBreakpoint);
   }, [breakpoint]);
   return (
-    <>
+    <div className="theme-main">
       <Header breakpoint={breakpoint} openComingModal={openComingModal} />
       <AppRouter breakpoint={breakpoint} openComingModal={openComingModal} />
 
@@ -23,6 +23,6 @@ export function MPeardevApp() {
           closeComingModal={closeComingModal}
         />
       )}
-    </>
+    </div>
   );
 }

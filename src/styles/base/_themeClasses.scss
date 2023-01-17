@@ -1,0 +1,78 @@
+@import "./theme";
+
+// Main
+.theme-main {
+  @include themed() {
+    color: t("text");
+    background: t("bg");
+  }
+  p {
+    @include themed() {
+      color: t("text-secondary");
+    }
+  }
+  a {
+    @include themed() {
+      color: t("link");
+      @media (hover: hover) {
+        &:hover {
+          color: t("link-hover");
+        }
+      }
+    }
+  }
+}
+
+// Links
+.theme-link-active {
+  font-weight: bold;
+  @include themed() {
+    color: t("primary") !important;
+  }
+}
+.theme-subtitle {
+  @include themed() {
+    color: t("primary");
+  }
+}
+
+// Buttons
+.theme-button-primary {
+  @include themed() {
+    background: t("button-bg-primary");
+    border-color: t("border");
+    @media (hover: hover) {
+      &:hover {
+        background: t("button-bg-hover");
+        color: #fff;
+      }
+    }
+    &:active {
+      background: t("button-bg-active");
+      color: #fff;
+    }
+  }
+}
+.theme-button-secondary {
+  @include themed() {
+    color: t("primary");
+    background: t("button-secondary");
+    border-color: t("border");
+    @media (hover: hover) {
+      &:hover {
+        background: t("button-bg-hover");
+        color: #fff;
+      }
+    }
+    &:active {
+      background: t("button-bg-active");
+      color: #fff;
+    }
+  }
+}
+
+.theme-player {
+  @include themed() {
+    background: t("primary");
+  }
+}

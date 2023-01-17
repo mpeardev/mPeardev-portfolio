@@ -12,20 +12,20 @@ export function LinksHeader({ show, openComingModal }) {
       <div>
         <NavLink
           to="/"
-          className={({ isActive }) => (isActive ? "link-active" : "link")}
+          className={({ isActive }) => (isActive ? "theme-link-active" : "")}
         >
           Home
         </NavLink>
         {/* <NavLink
           to="/about"
-          className={({ isActive }) => (isActive ? "link-active" : "link")}
+          className={({ isActive }) => (isActive ? "theme-link-active" : "")}
         >
           Sobre mi
         </NavLink> */}
         <a onClick={openComingModal}>Sobre mi</a>
         {/* <NavLink
           to="/projects"
-          className={({ isActive }) => (isActive ? "link-active" : "link")}
+          className={({ isActive }) => (isActive ? "theme-link-active" : "")}
         >
           Proyectos
         </NavLink> */}

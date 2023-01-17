@@ -1,0 +1,53 @@
+@use "./colors" as colors;
+
+$themes: (
+  light: (
+    primary: colors.$primary--light,
+    bg: colors.$bg--light,
+    text: colors.$text-primary--light,
+    text-secondary: colors.$text-secondary--light,
+    button-bg-primary: colors.$primary--light,
+    button-bg-secondary: #{colors.$primary--light}#{"30"},
+    button-bg-hover: #{colors.$primary--light}#{"80"},
+    button-bg-active: #{colors.$primary--light}#{"50"},
+    border: colors.$primary--light,
+    link: colors.$text-primary--light,
+    link-hover: colors.$primary--light,
+  ),
+  dark: (
+    primary: colors.$primary--dark,
+    bg: colors.$bg--dark,
+    text: colors.$text-primary--dark,
+    text-secondary: colors.$text-secondary--dark,
+    button-bg-primary: colors.$primary--dark,
+    button-bg-secondary: #{colors.$primary--dark}#{"30"},
+    button-bg-hover: #{colors.$primary--dark}#{"80"},
+    button-bg-active: #{colors.$primary--dark}#{"50"},
+    border: colors.$primary--dark,
+    link: colors.$text-primary--dark,
+    link-hover: colors.$primary--dark,
+  ),
+);
+
+@mixin themed() {
+  @each $theme, $map in $themes {
+    .theme--#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function t($key) {
+  @return map-get($theme-map, $key);
+}

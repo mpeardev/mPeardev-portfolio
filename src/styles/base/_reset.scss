@@ -9,10 +9,8 @@ body {
 }
 
 body {
-  background: colors.$secondary;
   font-size: 1rem;
   letter-spacing: 2px;
-  color: colors.$text;
   font-family: typography.$secondary20;
   user-select: none;
   scroll-behavior: smooth;
@@ -33,18 +31,28 @@ a:link {
 a:visited {
   text-decoration: none;
 }
+a {
+  cursor: pointer;
+  transition: 0.4s;
+}
 
 // CUSTOM-SCROLLBAR
-body::-webkit-scrollbar {
-  width: 7px;
-}
-body::-webkit-scrollbar-track {
-  background: colors.$secondary;
-}
-body::-webkit-scrollbar-thumb {
-  background-color: colors.$primary;
-  border-radius: 10px;
-}
-body::-webkit-scrollbar-button {
-  display: none;
-}
+// body::-webkit-scrollbar {
+//   width: 7px;
+// }
+// body::-webkit-scrollbar-track {
+//   // background: colors.$secondary--dark;
+//   @include themed() {
+//     background: t("bg");
+//   }
+// }
+// body::-webkit-scrollbar-thumb {
+//   // background-color: colors.$primary--dark;
+//   border-radius: 10px;
+//   @include themed() {
+//     background: t("bg");
+//   }
+// }
+// body::-webkit-scrollbar-button {
+//   display: none;
+// }

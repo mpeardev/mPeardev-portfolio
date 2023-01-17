@@ -4,7 +4,7 @@
 .title {
   & h1,
   h3 {
-    color: colors.$text;
+    // color: colors.$text;
     font-family: typography.$primary;
   }
   & h1 {
@@ -18,6 +18,6 @@
     line-height: 35px;
     // letter-spacing: 4px;
     font-weight: 50;
-    color: colors.$primary;
+    // color: colors.$primary;
   }
 }

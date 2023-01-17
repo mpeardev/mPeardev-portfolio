@@ -16,7 +16,7 @@ export function Primary({
 
   return (
     <button
-      className={`${classes.button} ${classes.primary}`}
+      className={`theme-button-primary ${classes.button} ${classes.primary}`}
       style={styleButton}
       onClick={onClick}
     >

@@ -60,8 +60,8 @@ export function Header({ breakpoint, openComingModal }) {
             }}
           >
             <div className={classes.header__options}>
-              <ToggleMode openComingModal={openComingModal} />
-              <Player openComingModal={openComingModal} />
+              <ToggleMode />
+              <Player />
               <MenuIconHeader
                 breakpoint={breakpoint}
                 show={show}

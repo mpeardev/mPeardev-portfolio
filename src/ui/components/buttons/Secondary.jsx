@@ -16,7 +16,7 @@ export function Secondary({
 
   return (
     <button
-      className={`${classes.button} ${classes.secondary}`}
+      className={`theme-button-secondary ${classes.button} ${classes.secondary}`}
       style={styleButton}
       onClick={onClick}
     >

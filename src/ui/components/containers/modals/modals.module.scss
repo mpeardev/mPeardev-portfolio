@@ -37,7 +37,7 @@
     cursor: pointer;
     @media (hover: hover) {
       &:hover {
-        color: colors.$secondary;
+        // color: colors.$secondary;
       }
     }
   }
@@ -52,7 +52,7 @@
   background: transparent;
 }
 .modal__container::-webkit-scrollbar-thumb {
-  background-color: colors.$primary;
+  // background-color: colors.$primary;
   border-radius: 10px;
 }
 .modal__container::-webkit-scrollbar-button {
