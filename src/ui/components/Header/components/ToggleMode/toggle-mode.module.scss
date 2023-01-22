@@ -1,5 +1,6 @@
 @use "/src/styles/base/colors" as colors;
 @use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/breakpoints" as breakpoints;
 
 $size: 1.75rem;
 $darkColor: #475547;

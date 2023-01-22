@@ -20,7 +20,11 @@ export function Header({ openComingModal }) {
         <div className={classes.header__container}>
           <Logo />
 
-          <Links show={show} openComingModal={openComingModal} />
+          <Links
+            show={show}
+            openComingModal={openComingModal}
+            setShow={setShow}
+          />
 
           <motion.div
             initial={{

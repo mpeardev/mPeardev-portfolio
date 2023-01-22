@@ -19,7 +19,7 @@
     }
   }
   &__options {
-    @include utilities.flexbox-params(flex, flex-end, auto);
+    @include utilities.flexbox-params(flex, center, auto);
     gap: 2.5rem;
     @include breakpoints.medium {
       gap: 1rem;
@@ -56,7 +56,6 @@
     }
   }
   &__menuicon {
-    transition: 0.4s;
     cursor: pointer;
     @include breakpoints.medium {
       margin-left: 2rem;
@@ -64,5 +63,34 @@
     @include breakpoints.small {
       margin-left: 1rem;
     }
+    & > button {
+      @include utilities.flexbox-params(flex, flex-end, center);
+      flex-direction: column;
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 0;
+      background: transparent;
+      gap: 0.5rem;
+      & > div {
+        background: #000;
+        height: 2px;
+        width: 100%;
+        border-radius: 5px;
+        transition: all 0.5s;
+        transform-origin: left;
+      }
+    }
+  }
+}
+
+.styleIconOpen {
+  & > div:first-child {
+    transform: rotate(45deg);
+  }
+  & > div:nth-child(2) {
+    opacity: 0;
+  }
+  & > div:last-child {
+    transform: rotate(-45deg);
   }
 }

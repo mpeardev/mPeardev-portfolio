@@ -4,7 +4,7 @@ import classes from "../header.module.scss";
 import { useContext } from "react";
 import BreakpointContext from "../../../../state/breakpoint/BreakpointContext";
 
-export function Links({ show, openComingModal }) {
+export function Links({ show, openComingModal, setShow }) {
   const { breakpoint } = useContext(BreakpointContext);
 
   return (
@@ -27,6 +27,7 @@ export function Links({ show, openComingModal }) {
         <NavLink
           to="/"
           className={({ isActive }) => (isActive ? "theme-link-active" : "")}
+          onClick={() => setShow(false)}
         >
           Home
         </NavLink>
@@ -36,10 +37,18 @@ export function Links({ show, openComingModal }) {
         >
           Sobre mi
         </NavLink> */}
-        <a onClick={openComingModal}>Sobre mi</a>
+        <a
+          onClick={() => {
+            openComingModal();
+            setShow(false);
+          }}
+        >
+          Sobre mi
+        </a>
         <NavLink
           to="/projects"
           className={({ isActive }) => (isActive ? "theme-link-active" : "")}
+          onClick={() => setShow(false)}
         >
           Proyectos
         </NavLink>

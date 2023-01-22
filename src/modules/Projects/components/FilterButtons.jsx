@@ -4,7 +4,12 @@ import ProjectsContext from "../../../state/projects/ProjectsContext";
 import classes from "../projects.module.scss";
 import { Secondary } from "/src/ui/components";
 
-export function FilterButtons({ impButtons, filterProjects, setProjectsArr }) {
+export function FilterButtons({
+  impButtons,
+  filterProjects,
+  setProjectsArr,
+  setHiddenSidebar,
+}) {
   const { projects } = useContext(ProjectsContext);
   const { breakpoint } = useContext(BreakpointContext);
 
@@ -25,6 +30,14 @@ export function FilterButtons({ impButtons, filterProjects, setProjectsArr }) {
     formatButton();
     selectButton("todos");
   }, [projects]);
+
+  const buttonClick = () => {
+    setHiddenSidebar(true);
+
+    const gallery = document.getElementById("gallery");
+    gallery.scrollTop = 0;
+  };
+
   return (
     <div className={classes.projects__sidebarButtons}>
       <Secondary
@@ -35,6 +48,7 @@ export function FilterButtons({ impButtons, filterProjects, setProjectsArr }) {
         onClick={() => {
           setProjectsArr(projects);
           selectButton("todos");
+          buttonClick();
         }}
       />
       {impButtons.map((category, i) => {
@@ -48,6 +62,7 @@ export function FilterButtons({ impButtons, filterProjects, setProjectsArr }) {
               onClick={() => {
                 filterProjects(category);
                 selectButton(category);
+                buttonClick();
               }}
             />
           </div>

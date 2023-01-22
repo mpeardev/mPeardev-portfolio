@@ -36,6 +36,7 @@ export function Sidebar({
         impButtons={impButtons}
         filterProjects={filterProjects}
         setProjectsArr={setProjectsArr}
+        setHiddenSidebar={setHiddenSidebar}
       />
     </motion.section>
   );

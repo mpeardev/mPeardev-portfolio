@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import BreakpointContext from "../../../../state/breakpoint/BreakpointContext";
 import classes from "../header.module.scss";
-import { AiOutlineMenu } from "/src/ui/icons";
 
 export function MenuIcon({ show, setShow }) {
   const { breakpoint } = useContext(BreakpointContext);
@@ -15,9 +14,13 @@ export function MenuIcon({ show, setShow }) {
       }}
       onClick={() => setShow(!show)}
     >
-      <div>
-        <AiOutlineMenu size="1.5rem" />
-      </div>
+      <button
+        className={`theme-button-menu ${show ? classes.styleIconOpen : null}`}
+      >
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
     </div>
   );
 }
