@@ -21,6 +21,11 @@
       }
     }
   }
+  button {
+    @include themed() {
+      color: t("bg");
+    }
+  }
 }
 
 // Links
@@ -44,46 +49,90 @@
     @media (hover: hover) {
       &:hover {
         background: t("button-bg-hover");
-        color: #fff;
+        color: #fff !important;
       }
     }
     &:active {
       background: t("button-bg-active");
-      color: #fff;
+      color: #fff !important;
     }
   }
 }
 .theme-button-secondary {
   @include themed() {
-    color: t("primary");
-    background: t("button-secondary");
+    color: t("primary") !important;
+    background: t("button-bg-secondary");
     border-color: t("border");
     @media (hover: hover) {
       &:hover {
         background: t("button-bg-hover");
-        color: #fff;
+        color: #fff !important;
       }
     }
     &:active {
       background: t("button-bg-active");
-      color: #fff;
+      color: #fff !important;
     }
   }
 }
+.theme-button-active {
+  @include themed() {
+    background: t("button-bg-primary");
+    color: t("bg") !important;
+  }
+}
+.theme-button-showsidebar {
+  @include themed() {
+    background: t("button-bg-secondary");
+    color: t("primary") !important;
+  }
+}
 
+// Player
 .theme-player {
   @include themed() {
     background: t("primary");
   }
 }
 
+// Modals
 .theme-modal-bg {
   @include themed() {
     background: t("modal-bg");
   }
 }
+
+// Menu Responsive
 .theme-menu-bg {
   @include themed() {
     background: t("menu-bg");
+  }
+}
+.theme-sidebar {
+  @include themed() {
+    background: t("bg");
+    box-shadow: 2px 0px 30px 0px t("shadow");
+  }
+}
+
+// Card Projects
+.theme-card-bg {
+  @include themed() {
+    background: t("card-bg");
+  }
+}
+
+.scroll-design {
+  @include themed() {
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: t("primary");
+    }
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
   }
 }

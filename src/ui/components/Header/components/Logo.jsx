@@ -1,20 +1,31 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import ThemeContext from "../../../../state/theme/ThemeContext";
+import { motion } from "framer-motion";
+import BreakpointContext from "../../../../state/breakpoint/BreakpointContext";
 
-export function Logo({ breakpoint }) {
+export function Logo() {
+  const { breakpoint } = useContext(BreakpointContext);
   const { theme } = useContext(ThemeContext);
   return (
-    <div>
+    <motion.div
+      initial={{
+        y: -200,
+      }}
+      animate={{
+        y: 0,
+        transition: { type: "spring", duration: 1.5, delay: 0.1 },
+      }}
+    >
       <Link to="/">
         {breakpoint <= 640 && (
           <img
             src={
               theme === "dark"
-                ? "/icon/200x200/icon-dark.png"
+                ? "/img/icon/200x200/icon-dark.png"
                 : theme === "light"
-                ? "/icon/200x200/icon.png"
-                : "/icon/200x200/icon.png"
+                ? "/img/icon/200x200/icon.png"
+                : "/img/icon/200x200/icon.png"
             }
             alt="logo"
             style={{ width: "3rem" }}
@@ -24,10 +35,10 @@ export function Logo({ breakpoint }) {
           <img
             src={
               theme === "dark"
-                ? "/logo/logo-notebook-dark.png"
+                ? "/img/logo/logo-notebook-dark.png"
                 : theme === "light"
-                ? "/logo/logo-notebook.png"
-                : "/logo/logo-notebook.png"
+                ? "/img/logo/logo-notebook.png"
+                : "/img/logo/logo-notebook.png"
             }
             alt="logo"
             style={{ width: "7rem" }}
@@ -37,16 +48,16 @@ export function Logo({ breakpoint }) {
           <img
             src={
               theme === "dark"
-                ? "/logo/logo-dark.png"
+                ? "/img/logo/logo-dark.png"
                 : theme === "light"
-                ? "/logo/logo.png"
-                : "/logo/logo.png"
+                ? "/img/logo/logo.png"
+                : "/img/logo/logo.png"
             }
             alt="logo"
             style={{ width: "10rem" }}
           />
         )}
       </Link>
-    </div>
+    </motion.div>
   );
 }

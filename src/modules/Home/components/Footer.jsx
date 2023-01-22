@@ -10,7 +10,7 @@ export function Footer() {
         }}
         animate={{
           y: 0,
-          transition: { type: "spring", duration: 1.5, delay: 0.5 },
+          transition: { type: "spring", duration: 1.5, delay: 0.3 },
         }}
       >
         &copy;{new Date().getFullYear()} All rights reserved
@@ -21,7 +21,7 @@ export function Footer() {
         }}
         animate={{
           y: 0,
-          transition: { type: "spring", duration: 0.5, delay: 1.3 },
+          transition: { type: "spring", duration: 0.5, delay: 1 },
         }}
       >
         mirkoperamas@gmail.com

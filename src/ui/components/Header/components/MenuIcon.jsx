@@ -1,7 +1,11 @@
+import { useContext } from "react";
+import BreakpointContext from "../../../../state/breakpoint/BreakpointContext";
 import classes from "../header.module.scss";
 import { AiOutlineMenu } from "/src/ui/icons";
 
-export function MenuIcon({ breakpoint, show, setShow }) {
+export function MenuIcon({ show, setShow }) {
+  const { breakpoint } = useContext(BreakpointContext);
+
   return (
     <div
       className={classes.header__menuicon}

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { modalSize } from "/src/config/modalSize";
+import { modalSize } from "../config/modalSize";
 
 export function useModalSize() {
   const [styleModal, setStyleModal] = useState();

@@ -1,0 +1,97 @@
+{
+  "projects": [
+    {
+      "name": "renian",
+      "category": "principales",
+      "tecnologies": ["Next.js", "Sass", "Atomic Design", "Solidity"],
+      "links": [
+        {
+          "repository": "https://github.com/mirkoperamas/renian-web",
+          "deploy": "https://renian.pe/"
+        }
+      ],
+      "image": "/img/projects/renian.jpg"
+    },
+    {
+      "name": "mpeardev games",
+      "category": "principales",
+      "tecnologies": ["React", "Sass"],
+      "links": [
+        {
+          "repository": "https://github.com/mirkoperamas/mPeardev-games.git",
+          "deploy": "https://mpeardev-simple-games.netlify.app/"
+        }
+      ],
+      "image": "/img/projects/mpeardev-games.jpg"
+    },
+    {
+      "name": "war registration platform",
+      "category": "colaboraciones",
+      "tecnologies": ["Next.js", "Tailwindcss", "Solidity"],
+      "links": [
+        {
+          "deploy": "https://registro.firulaixcoin.finance"
+        }
+      ],
+      "image": "/img/projects/war-registration.jpg"
+    },
+    {
+      "name": "master pedidos app",
+      "category": "colaboraciones",
+      "tecnologies": ["ionic", "angular", "typescript", "firebase"],
+      "links": [
+        {
+          "deploy": "https://play.google.com/store/apps/details?id=com.masterfood.sms"
+        }
+      ],
+      "image": "/img/projects/master-pedidos.jpg"
+    },
+    {
+      "name": "mpeardev portfolio",
+      "category": "principales",
+      "tecnologies": ["react", "sass", "framer motion"],
+      "links": [
+        {
+          "repository": "https://github.com/mirkoperamas/mPeardev-portfolio",
+          "deploy": "https://mpeardev.netlify.app/"
+        }
+      ],
+      "image": "/img/projects/mpeardev-portfolio.jpg"
+    },
+    {
+      "name": "react practice",
+      "category": "ejercicios",
+      "tecnologies": ["react", "bootstrap", "css"],
+      "links": [
+        {
+          "repository": "https://stackblitz.com/edit/mpeardev-react-practice?file=README.md",
+          "deploy": "https://mpeardev-react-practice.stackblitz.io/"
+        }
+      ],
+      "image": "/img/projects/react-practice.jpg"
+    },
+    {
+      "name": "firutopia",
+      "category": "colaboraciones",
+      "tecnologies": ["nextjs", "css", "solidity"],
+      "links": [
+        {
+          "deploy": "https://firulaixcoin.finance/"
+        }
+      ],
+      "image": "/img/projects/firutopia.jpg"
+    },
+    {
+      "name": "tech products crud",
+      "category": "ejercicios",
+      "tecnologies": ["react", "styled components", "firebase"],
+      "links": [
+        {
+          "repository": "https://github.com/mirkoperamas/tech-products-crud",
+          "deploy": "https://mirkoperamas.github.io/tech-products-crud/"
+        }
+      ],
+      "image": "/img/projects/tech-products.jpg"
+    }
+  ]
+}

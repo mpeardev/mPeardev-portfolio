@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import ThemeContext, { initialThemeState } from "./ThemeContext";
 
-const ThemeProvider = ({ children }) => {
+export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(initialThemeState.theme);
 
   const localStorage = window.localStorage;
@@ -24,5 +24,3 @@ const ThemeProvider = ({ children }) => {
     </ThemeContext.Provider>
   );
 };
-
-export default ThemeProvider;

@@ -1,5 +1,6 @@
 @use "./colors" as colors;
 @use "./typography" as typography;
+@import "./theme";
 
 *,
 html,
@@ -38,20 +39,15 @@ a {
 
 // CUSTOM-SCROLLBAR
 // body::-webkit-scrollbar {
-//   width: 7px;
+//   width: 8px;
+//   // display: none;
 // }
 // body::-webkit-scrollbar-track {
-//   // background: colors.$secondary--dark;
-//   @include themed() {
-//     background: t("bg");
-//   }
+//   background: #fff;
 // }
 // body::-webkit-scrollbar-thumb {
-//   // background-color: colors.$primary--dark;
 //   border-radius: 10px;
-//   @include themed() {
-//     background: t("bg");
-//   }
+//   background: #000;
 // }
 // body::-webkit-scrollbar-button {
 //   display: none;

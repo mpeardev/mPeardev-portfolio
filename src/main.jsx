@@ -2,15 +2,21 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { MPeardevApp } from "./MPeardevApp";
-import ThemeProvider from "./state/theme/ThemeProvider";
+import { BreakpointProvider } from "./state/breakpoint/BreakpointProvider";
+import { ProjectsProvider } from "./state/projects/ProjectsProvider";
+import { ThemeProvider } from "./state/theme/ThemeProvider";
 import "./styles/main.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
+  // <React.StrictMode>
+  <BrowserRouter>
+    <BreakpointProvider>
       <ThemeProvider>
-        <MPeardevApp />
+        <ProjectsProvider>
+          <MPeardevApp />
+        </ProjectsProvider>
       </ThemeProvider>
-    </BrowserRouter>
-  </React.StrictMode>
+    </BreakpointProvider>
+  </BrowserRouter>
+  // </React.StrictMode>
 );

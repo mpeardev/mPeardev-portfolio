@@ -2,13 +2,8 @@
 @use "/src/styles/base/colors" as colors;
 @use "/src/styles/base/typography" as typography;
 @use "/src/styles/base/breakpoints" as breakpoints;
-@import "/src/styles/base/theme";
 
 .header {
-  @include themed() {
-    color: t("text");
-    background: t("bg");
-  }
   width: 100%;
   position: absolute;
   z-index: 1;
@@ -43,7 +38,6 @@
       position: fixed;
       top: 0;
       left: 0;
-      // background: colors.$secondary;
       transition: 1s;
       z-index: 1000;
       @include utilities.flexbox-params(flex, center, center);
@@ -71,9 +65,4 @@
       margin-left: 1rem;
     }
   }
-}
-
-:export {
-  // headerBg: colors.$secondary;
-  // headerBgGradient: #{colors.$secondary}#{"ce"};
 }

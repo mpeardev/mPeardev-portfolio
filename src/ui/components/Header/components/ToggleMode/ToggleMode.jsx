@@ -6,19 +6,18 @@ export function ToggleMode() {
   const { theme, setTheme } = useContext(ThemeContext);
   const check = useRef(null);
 
-  // modify
-  const handleCheck = () => {
-    !check.current.checked;
-    verify();
-  };
-
-  const verify = () => {
+  const verifyChecked = () => {
     if (check.current.checked === !true) {
       setTheme("dark");
     }
     if (check.current.checked === !false) {
       setTheme("light");
     }
+  };
+
+  const handleCheck = () => {
+    !check.current.checked;
+    verifyChecked();
   };
 
   useEffect(() => {

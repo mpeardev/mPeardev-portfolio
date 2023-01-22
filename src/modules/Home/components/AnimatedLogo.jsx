@@ -53,7 +53,7 @@ export function Animatedlogo() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{
-        delay: 2,
+        delay: 1.7,
       }}
     >
       <svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">

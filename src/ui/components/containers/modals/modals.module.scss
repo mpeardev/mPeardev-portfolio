@@ -34,11 +34,6 @@
     right: 1rem;
     transition: 0.4s;
     cursor: pointer;
-    @media (hover: hover) {
-      &:hover {
-        // color: colors.$secondary;
-      }
-    }
   }
   &__content {
     width: 100%;
@@ -51,7 +46,7 @@
   background: transparent;
 }
 .modal__container::-webkit-scrollbar-thumb {
-  // background-color: colors.$primary;
+  background: #000;
   border-radius: 10px;
 }
 .modal__container::-webkit-scrollbar-button {

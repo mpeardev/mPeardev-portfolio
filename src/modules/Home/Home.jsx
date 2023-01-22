@@ -1,22 +1,24 @@
 import classes from "./home.module.scss";
-import { PageContainer } from "/src/ui/components";
+import { PageContainer, Content } from "/src/ui/components";
 import { Animatedlogo, SocialIcons, Footer, Resume } from "./components";
 
-export function Home({ breakpoint, openComingModal }) {
+export function Home({ openComingModal }) {
   return (
-    <section className={classes.home}>
+    <div className={classes.home}>
       <PageContainer>
         <div className={classes.home__content}>
-          <div className={classes.home__main}>
-            <Resume breakpoint={breakpoint} openComingModal={openComingModal} />
-            <div className={classes.home__image}>
-              <Animatedlogo />
-            </div>
-          </div>
+          <Content>
+            <main className={classes.home__main}>
+              <Resume openComingModal={openComingModal} />
+              <div className={classes.home__image}>
+                <Animatedlogo />
+              </div>
+            </main>
+          </Content>
         </div>
-        <SocialIcons breakpoint={breakpoint} />
+        <SocialIcons />
         <Footer />
       </PageContainer>
-    </section>
+    </div>
   );
 }

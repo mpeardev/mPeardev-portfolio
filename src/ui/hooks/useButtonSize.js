@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { buttonSize } from "../../config/buttonSize";
+import { buttonSize } from "../config/buttonSize";
 
 export function useButtonSize() {
   const [styleButton, setStyleButton] = useState();

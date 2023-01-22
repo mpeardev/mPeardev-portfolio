@@ -3,15 +3,19 @@ import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { Title, Subtitle } from "/src/ui/components";
 import { Buttons } from "../components";
+import { useContext } from "react";
+import BreakpointContext from "../../../state/breakpoint/BreakpointContext";
 
-export function Resume({ breakpoint, openComingModal }) {
+export function Resume({ openComingModal }) {
+  const { breakpoint } = useContext(BreakpointContext);
+
   return (
-    <div className={classes.home__about}>
+    <section className={classes.home__about}>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{
-          delay: 1.5,
+          delay: 0.5,
         }}
       >
         <Title size={breakpoint >= 1280 ? "80px" : "60px"}>
@@ -34,8 +38,8 @@ export function Resume({ breakpoint, openComingModal }) {
             sobre mí y revisar algunos de mis proyectos y colaboraciones.
           </p>
         </div>
-        <Buttons breakpoint={breakpoint} openComingModal={openComingModal} />
+        <Buttons openComingModal={openComingModal} />
       </motion.div>
-    </div>
+    </section>
   );
 }

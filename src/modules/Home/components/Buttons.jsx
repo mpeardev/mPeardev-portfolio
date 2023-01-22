@@ -1,7 +1,11 @@
 import { Primary, Secondary } from "/src/ui/components";
 import classes from "../home.module.scss";
+import { useContext } from "react";
+import BreakpointContext from "../../../state/breakpoint/BreakpointContext";
 
-export function Buttons({ breakpoint, openComingModal }) {
+export function Buttons({ openComingModal }) {
+  const { breakpoint } = useContext(BreakpointContext);
+
   const onPDFButtonClick = () => {
     fetch("/pdf/Mirko_Peramas_CV.pdf").then((response) => {
       response.blob().then((blob) => {

@@ -1,11 +1,5 @@
 import { Home } from "./Home";
 
-export function HomePage({ breakpoint, openComingModal }) {
-  return (
-    <>
-      <div>
-        <Home breakpoint={breakpoint} openComingModal={openComingModal} />
-      </div>
-    </>
-  );
+export function HomePage({ openComingModal }) {
+  return <Home openComingModal={openComingModal} />;
 }

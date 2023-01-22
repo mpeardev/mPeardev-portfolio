@@ -3,6 +3,8 @@ import classes from "./buttons.module.scss";
 import { useButtonSize } from "../../hooks/useButtonSize";
 
 export function Secondary({
+  id = null,
+  className = null,
   name = "name",
   size,
   onClick = () => false,
@@ -16,7 +18,8 @@ export function Secondary({
 
   return (
     <button
-      className={`theme-button-secondary ${classes.button} ${classes.secondary}`}
+      id={id}
+      className={`theme-button-secondary theme-button-active ${className} ${classes.button} ${classes.secondary}`}
       style={styleButton}
       onClick={onClick}
     >

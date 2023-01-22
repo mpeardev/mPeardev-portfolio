@@ -4,20 +4,16 @@
 .title {
   & h1,
   h3 {
-    // color: colors.$text;
     font-family: typography.$primary;
   }
   & h1 {
     font-size: 65px;
-    line-height: 70px;
-    // letter-spacing: 6px;
+    // line-height: 70px;
     font-weight: 100;
   }
   & h3 {
     font-size: 25px;
     line-height: 35px;
-    // letter-spacing: 4px;
     font-weight: 50;
-    // color: colors.$primary;
   }
 }

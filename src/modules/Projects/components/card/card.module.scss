@@ -1,0 +1,81 @@
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/utilities" as utilities;
+
+.card {
+  position: relative;
+  border: 1px solid colors.$border-default;
+  border-radius: 5px;
+  width: 100%;
+  height: 25rem;
+  &:hover {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      background: linear-gradient(
+        90deg,
+        colors.$primary--light,
+        rgba(128, 128, 128, 0.116),
+        colors.$primary--dark
+      );
+      background-size: 400%;
+      width: calc(100% + 8px);
+      height: calc(100% + 8px);
+      z-index: -1;
+      animation: animate 6s linear infinite;
+    }
+    & .card__image {
+      filter: grayscale(0);
+    }
+  }
+  @keyframes animate {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  &::after {
+    filter: blur(40px);
+    opacity: 0.5;
+  }
+  &__image {
+    width: 100%;
+    height: 18rem;
+    border-radius: 5px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(0.7);
+  }
+  &__info {
+    width: 100%;
+    height: 7rem;
+    padding: 4%;
+    @include utilities.flexbox-params(flex, auto, space-between);
+    flex-direction: column;
+    & > div:last-child {
+      width: 100%;
+      height: auto;
+      @include utilities.grid-params(grid, 1.5fr 0.5fr, 1rem, auto);
+    }
+    &Tech {
+      @include utilities.flexbox-params(flex, auto, auto);
+      flex-wrap: wrap;
+      & > p {
+        font-size: 12px;
+        text-transform: capitalize;
+      }
+    }
+    &Icons {
+      @include utilities.flexbox-params(flex, auto, flex-end);
+      gap: 0.5rem;
+    }
+  }
+}

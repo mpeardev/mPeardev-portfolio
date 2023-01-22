@@ -16,14 +16,10 @@
   &__main {
     width: 100%;
     height: 100%;
-    max-width: 1800px;
-    padding: 0 2%;
-    margin: 0 auto;
     @include utilities.grid-params(grid, 1fr 1fr, auto, auto);
     align-items: center;
     @include breakpoints.medium {
       @include utilities.grid-params(grid, 1fr, auto, auto);
-      padding: 0 4%;
     }
   }
   &__about {
@@ -114,12 +110,4 @@
       transform-origin: center;
     }
   }
-}
-
-#main {
-  transform-origin: center;
-}
-
-:export {
-  // primary: colors.$primary;
 }
