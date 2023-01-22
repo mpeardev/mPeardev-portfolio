@@ -2,9 +2,11 @@ import { Primary, Secondary } from "/src/ui/components";
 import classes from "../home.module.scss";
 import { useContext } from "react";
 import BreakpointContext from "../../../state/breakpoint/BreakpointContext";
+import { useNavigate } from "react-router-dom";
 
-export function Buttons({ openComingModal }) {
+export function Buttons() {
   const { breakpoint } = useContext(BreakpointContext);
+  const navigate = useNavigate();
 
   const onPDFButtonClick = () => {
     fetch("/pdf/Mirko_Peramas_CV.pdf").then((response) => {
@@ -25,7 +27,7 @@ export function Buttons({ openComingModal }) {
           <Primary
             name="Proyectos"
             size={breakpoint >= 1280 ? "xl" : breakpoint >= 768 ? "lg" : "sm"}
-            onClick={openComingModal}
+            onClick={() => navigate("/projects")}
           />
         </div>
         <div>

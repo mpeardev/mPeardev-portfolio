@@ -5,9 +5,11 @@ import { Title, Subtitle } from "/src/ui/components";
 import { Buttons } from "../components";
 import { useContext } from "react";
 import BreakpointContext from "../../../state/breakpoint/BreakpointContext";
+import { useNavigate } from "react-router-dom";
 
-export function Resume({ openComingModal }) {
+export function Resume() {
   const { breakpoint } = useContext(BreakpointContext);
+  const navigate = useNavigate();
 
   return (
     <section className={classes.home__about}>
@@ -34,11 +36,11 @@ export function Resume({ openComingModal }) {
             Hola! me llamo Mirko, aficionado del desarrollo web y la tecnología.
             Actualmente me especializo como desarrollador Frontend, con
             experiencia en creación de templates y aplicaciones web.
-            <a onClick={openComingModal}> Aquí</a> puedes saber un poco más
-            sobre mí y revisar algunos de mis proyectos y colaboraciones.
+            <a onClick={() => navigate("/about")}> Aquí</a> puedes saber un poco
+            más sobre mí y revisar algunos de mis proyectos y colaboraciones.
           </p>
         </div>
-        <Buttons openComingModal={openComingModal} />
+        <Buttons />
       </motion.div>
     </section>
   );

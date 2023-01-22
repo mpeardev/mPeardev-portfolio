@@ -4,7 +4,7 @@ import classes from "./header.module.scss";
 import { Logo, Links, ToggleMode, Player, MenuIcon } from "./components";
 import BreakpointContext from "../../../state/breakpoint/BreakpointContext";
 
-export function Header({ openComingModal }) {
+export function Header() {
   const [show, setShow] = useState();
   const { breakpoint } = useContext(BreakpointContext);
 
@@ -20,11 +20,7 @@ export function Header({ openComingModal }) {
         <div className={classes.header__container}>
           <Logo />
 
-          <Links
-            show={show}
-            openComingModal={openComingModal}
-            setShow={setShow}
-          />
+          <Links show={show} setShow={setShow} />
 
           <motion.div
             initial={{

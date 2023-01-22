@@ -12,24 +12,14 @@
       ],
       "image": "/img/projects/renian.jpg"
     },
-    {
-      "name": "mpeardev games",
-      "category": "principales",
-      "tecnologies": ["React", "Sass"],
-      "links": [
-        {
-          "repository": "https://github.com/mirkoperamas/mPeardev-games.git",
-          "deploy": "https://mpeardev-simple-games.netlify.app/"
-        }
-      ],
-      "image": "/img/projects/mpeardev-games.jpg"
-    },
+
     {
       "name": "war registration platform",
       "category": "colaboraciones",
       "tecnologies": ["Next.js", "Tailwindcss", "Solidity"],
       "links": [
         {
+          "repository": "",
           "deploy": "https://registro.firulaixcoin.finance"
         }
       ],
@@ -41,10 +31,23 @@
       "tecnologies": ["ionic", "angular", "typescript", "firebase"],
       "links": [
         {
+          "repository": "",
           "deploy": "https://play.google.com/store/apps/details?id=com.masterfood.sms"
         }
       ],
       "image": "/img/projects/master-pedidos.jpg"
+    },
+    {
+      "name": "mpeardev games",
+      "category": "principales",
+      "tecnologies": ["React", "Sass"],
+      "links": [
+        {
+          "repository": "https://github.com/mirkoperamas/mPeardev-games.git",
+          "deploy": "https://mpeardev-simple-games.netlify.app/"
+        }
+      ],
+      "image": "/img/projects/mpeardev-games.jpg"
     },
     {
       "name": "mpeardev portfolio",
@@ -76,6 +79,7 @@
       "tecnologies": ["nextjs", "css", "solidity"],
       "links": [
         {
+          "repository": "",
           "deploy": "https://firulaixcoin.finance/"
         }
       ],

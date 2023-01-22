@@ -48,14 +48,14 @@ export function Card({ title, tech, repo, deploy, image, index }) {
             </div>
             <div className={classes.card__infoIcons}>
               {repo && (
-                <a href={repo} target="_blank">
+                <a href={repo} target="_blank" title="Ver repositorio">
                   <RiGitRepositoryLine
                     size={breakpoint <= 768 ? "1em" : "1.5em"}
                   />
                 </a>
               )}
               {deploy && (
-                <a href={deploy} target="_blank">
+                <a href={deploy} target="_blank" title="Visitar">
                   <FiLink size={breakpoint <= 768 ? "1em" : "1.5em"} />
                 </a>
               )}
