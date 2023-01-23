@@ -29,7 +29,7 @@ export function Projects() {
 
   return (
     <>
-      <section className={classes.projects}>
+      <div className={classes.projects}>
         <PageContainer>
           <div className={classes.projects__content}>
             <ShowIcon onClick={() => setHiddenSidebar(!hiddenSidebar)} />
@@ -43,7 +43,7 @@ export function Projects() {
             <ProjectsGallery projectsArr={projectsArr} />
           </div>
         </PageContainer>
-      </section>
+      </div>
     </>
   );
 }

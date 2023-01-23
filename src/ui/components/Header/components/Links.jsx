@@ -31,13 +31,14 @@ export function Links({ show, setShow }) {
         >
           Home
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to="/about"
           className={({ isActive }) => (isActive ? "theme-link-active" : "")}
           onClick={() => setShow(false)}
         >
           Sobre mi
-        </NavLink>
+        </NavLink> */}
+        <a>Sobre mi</a>
         <NavLink
           to="/projects"
           className={({ isActive }) => (isActive ? "theme-link-active" : "")}

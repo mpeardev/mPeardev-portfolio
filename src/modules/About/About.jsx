@@ -1,7 +1,13 @@
+import { ParticlesBg } from "./components";
+import { PageContainer } from "../../ui/components";
+import classes from "./about.module.scss";
+
 export function About() {
   return (
-    <>
-      <p>About</p>
-    </>
+    <div className={classes.about}>
+      <PageContainer>
+        <ParticlesBg />
+      </PageContainer>
+    </div>
   );
 }

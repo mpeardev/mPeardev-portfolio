@@ -36,8 +36,8 @@ export function Resume() {
             Hola! me llamo Mirko, aficionado del desarrollo web y la tecnología.
             Actualmente me especializo como desarrollador Frontend, con
             experiencia en creación de templates y aplicaciones web.
-            <a onClick={() => navigate("/about")}> Aquí</a> puedes saber un poco
-            más sobre mí y revisar algunos de mis proyectos y colaboraciones.
+            <a> Aquí</a> puedes saber un poco más sobre mí y revisar algunos de
+            mis proyectos y colaboraciones.
           </p>
         </div>
         <Buttons />
