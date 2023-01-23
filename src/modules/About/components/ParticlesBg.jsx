@@ -5,10 +5,11 @@ import { loadFull } from "tsparticles";
 import ThemeContext from "../../../state/theme/ThemeContext";
 import particlesLight from "../config/particles.json";
 import particlesDark from "../config/particles-dark.json";
+import { motion } from "framer-motion";
 
 export function ParticlesBg() {
   const { theme } = useContext(ThemeContext);
-  const [state, setState] = useState(particlesDark);
+  const [particles, setParticles] = useState(particlesDark);
 
   const particlesInit = useCallback((main) => {
     loadFull(main);
@@ -17,14 +18,24 @@ export function ParticlesBg() {
   useEffect(() => {
     switch (theme) {
       case "dark":
-        setState(particlesDark);
+        setParticles(particlesDark);
         break;
       case "light":
-        setState(particlesLight);
+        setParticles(particlesLight);
         break;
       default:
     }
   }, [theme]);
 
-  return <Particles options={state} init={particlesInit} />;
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        delay: 0.5,
+      }}
+    >
+      <Particles options={particles} init={particlesInit} />
+    </motion.div>
+  );
 }

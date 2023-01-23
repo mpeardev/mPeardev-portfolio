@@ -3,7 +3,7 @@
     {
       "name": "renian",
       "category": "principales",
-      "tecnologies": ["Next.js", "Sass", "Atomic Design", "Solidity"],
+      "tecnologies": ["Next.js", "Sass", "Atomic Design"],
       "links": [
         {
           "repository": "https://github.com/mirkoperamas/renian-web",
@@ -16,7 +16,7 @@
     {
       "name": "war registration platform",
       "category": "colaboraciones",
-      "tecnologies": ["Next.js", "Tailwindcss", "Solidity"],
+      "tecnologies": ["Next.js", "Tailwindcss"],
       "links": [
         {
           "repository": "",
@@ -88,7 +88,7 @@
     {
       "name": "tech products crud",
       "category": "ejercicios",
-      "tecnologies": ["react", "styled components", "firebase"],
+      "tecnologies": ["react", "styled components", "firebase", "solidity"],
       "links": [
         {
           "repository": "https://github.com/mirkoperamas/tech-products-crud",
