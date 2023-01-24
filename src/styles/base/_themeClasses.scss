@@ -81,7 +81,8 @@
     color: t("bg") !important;
   }
 }
-.theme-button-showsidebar {
+.theme-blur-bg {
+  backdrop-filter: blur(5px);
   @include themed() {
     background: t("button-bg-secondary");
     color: t("primary") !important;
@@ -93,11 +94,11 @@
     & > div {
       background: t("link") !important;
     }
-    @media (hover: hover) {
-      &:hover > div {
-        background: t("link-hover") !important;
-      }
-    }
+    // @media (hover: hover) {
+    //   &:hover > div {
+    //     background: t("link-hover") !important;
+    //   }
+    // }
   }
 }
 
@@ -136,16 +137,15 @@
 }
 
 .scroll-design {
-  @include themed() {
-    &::-webkit-scrollbar {
-      width: 6px;
-    }
-    &::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      background: t("primary");
-    }
-    &::-webkit-scrollbar-button {
-      display: none;
-    }
+  overflow: overlay;
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #a7a0a1;
+  }
+  &::-webkit-scrollbar-button {
+    display: none;
   }
 }

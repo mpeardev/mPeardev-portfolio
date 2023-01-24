@@ -66,8 +66,8 @@
     & > button {
       @include utilities.flexbox-params(flex, flex-end, center);
       flex-direction: column;
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 2.54rem;
+      height: 2.54rem;
       border: 0;
       background: transparent;
       gap: 0.5rem;

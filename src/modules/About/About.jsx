@@ -1,13 +1,14 @@
-import { ParticlesBg } from "./components";
-import { PageContainer } from "../../ui/components";
+import { Description, Hobbies, ParticlesBg } from "./components";
 import classes from "./about.module.scss";
 
 export function About() {
   return (
-    <div className={classes.about}>
-      <PageContainer>
-        <ParticlesBg />
-      </PageContainer>
+    <div className={`scroll-design ${classes.about}`}>
+      <ParticlesBg />
+      <div className={classes.about__content}>
+        <Description />
+        <Hobbies />
+      </div>
     </div>
   );
 }

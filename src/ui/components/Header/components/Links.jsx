@@ -38,7 +38,7 @@ export function Links({ show, setShow }) {
         >
           Sobre mi
         </NavLink> */}
-        <a>Sobre mi</a>
+        <a style={{ cursor: "auto" }}>Sobre mi</a>
         <NavLink
           to="/projects"
           className={({ isActive }) => (isActive ? "theme-link-active" : "")}

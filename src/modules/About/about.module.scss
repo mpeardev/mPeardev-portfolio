@@ -1,5 +1,50 @@
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/colors" as colors;
+
 .about {
   width: 100%;
-  min-height: 600px;
   position: relative;
+  overflow-y: scroll;
+  &__content {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  &__title {
+    width: 100%;
+    @include utilities.flexbox-params(flex, center, center);
+    gap: 2rem;
+    &Img {
+      width: 8rem;
+      height: 8rem;
+      border: 1px solid colors.$border-default;
+      border-radius: 50%;
+      @include utilities.flexbox-params(flex, center, center);
+    }
+  }
+  &__description,
+  &__hobbies {
+    width: 100%;
+    min-height: 600px;
+  }
+  &__description {
+    padding-top: 6rem;
+    & > div {
+      @include utilities.flexbox-params(flex, center, flex-start);
+      flex-direction: column;
+      gap: 3.5rem;
+    }
+    & p {
+      font-size: 22px;
+      z-index: 1;
+      margin: 0;
+      width: 100%;
+      max-width: 65rem;
+      transition: all 0.7s ease-in-out;
+      text-align: justify;
+    }
+  }
+  &__hobbies {
+    border: 1px solid green;
+  }
 }

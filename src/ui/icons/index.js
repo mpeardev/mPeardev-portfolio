@@ -6,6 +6,7 @@ import { MdHeadphones, MdDoubleArrow } from "react-icons/md";
 import { CiCircleAlert } from "react-icons/ci";
 import { RiGitRepositoryLine } from "react-icons/ri";
 import { FiLink } from "react-icons/fi";
+import { TiUser } from "react-icons/ti";
 
 export {
   BsLinkedin,
@@ -20,4 +21,5 @@ export {
   RiGitRepositoryLine,
   FiLink,
   MdDoubleArrow,
+  TiUser,
 };

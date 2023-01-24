@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useLayoutEffect, useState } from "react";
 import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
@@ -15,7 +15,7 @@ export function ParticlesBg() {
     loadFull(main);
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     switch (theme) {
       case "dark":
         setParticles(particlesDark);
@@ -23,18 +23,23 @@ export function ParticlesBg() {
       case "light":
         setParticles(particlesLight);
         break;
-      default:
     }
   }, [theme]);
 
+  const variants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 18,
+      },
+    },
+  };
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{
-        delay: 0.5,
-      }}
-    >
+    <motion.div initial="hidden" animate="visible" variants={variants}>
       <Particles options={particles} init={particlesInit} />
     </motion.div>
   );

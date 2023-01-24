@@ -18,6 +18,7 @@ export function Resume() {
         animate={{ opacity: 1 }}
         transition={{
           delay: 0.5,
+          duration: 3,
         }}
       >
         <Title size={breakpoint >= 1280 ? "80px" : "60px"}>
@@ -36,8 +37,8 @@ export function Resume() {
             Hola! me llamo Mirko, aficionado del desarrollo web y la tecnología.
             Actualmente me especializo como desarrollador Frontend, con
             experiencia en creación de templates y aplicaciones web.
-            <a> Aquí</a> puedes saber un poco más sobre mí y revisar algunos de
-            mis proyectos y colaboraciones.
+            <a style={{ cursor: "auto" }}> Aquí</a> puedes saber un poco más
+            sobre mí y revisar algunos de mis proyectos y colaboraciones.
           </p>
         </div>
         <Buttons />

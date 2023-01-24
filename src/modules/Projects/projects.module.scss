@@ -86,7 +86,6 @@
       @include utilities.flexbox-params(flex, center, center);
       border-radius: 50%;
       padding: 0.5rem;
-      backdrop-filter: blur(5px);
     }
   }
 }
