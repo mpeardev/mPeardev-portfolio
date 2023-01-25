@@ -6,17 +6,13 @@ import { motion } from "framer-motion";
 export function TitlePage() {
   const variants = {
     start: {
-      scale: 0,
       opacity: 0,
-      y: "-30vh",
     },
     finish: {
-      scale: 1,
       opacity: 1,
-      y: 0,
       transition: {
-        delay: 0.3,
-        duration: 3,
+        delay: 1,
+        duration: 3.5,
       },
     },
   };
@@ -33,7 +29,7 @@ export function TitlePage() {
           <TiUser size="6em" />
         </div>
       </div>
-      <Title title={"Sobre mi"} size="60px" />
+      <Title title={"Sobre mi"} size="80px" />
     </motion.div>
   );
 }

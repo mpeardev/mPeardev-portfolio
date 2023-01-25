@@ -39,7 +39,12 @@ export function ParticlesBg() {
   };
 
   return (
-    <motion.div initial="hidden" animate="visible" variants={variants}>
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={variants}
+      style={{ position: "relative", zIndex: "0" }}
+    >
       <Particles options={particles} init={particlesInit} />
     </motion.div>
   );

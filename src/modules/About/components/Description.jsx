@@ -10,7 +10,7 @@ export function Description() {
   const { scrollY } = useScroll();
   const opacity = useTransform(scrollY, [0, scrollAmount], [1, 0]);
   const scale = useTransform(scrollY, [0, scrollAmount], [1, 1.2]);
-  const y = useTransform(scrollY, [0, scrollAmount], [0, 50]);
+  const y = useTransform(scrollY, [0, scrollAmount], [0, 80]);
 
   const variants = {
     hidden: {
@@ -21,7 +21,7 @@ export function Description() {
       opacity: 1,
       scale: 1,
       transition: {
-        delay: 1,
+        delay: 0.7,
         duration: 2,
       },
     },

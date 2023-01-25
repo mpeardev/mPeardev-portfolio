@@ -1,5 +1,6 @@
 @use "/src/styles/base/utilities" as utilities;
 @use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/breakpoints" as breakpoints;
 
 .about {
   width: 100%;
@@ -9,23 +10,32 @@
     width: 100%;
     height: auto;
     overflow: hidden;
+    @include utilities.flexbox-params(flex, auto, auto);
+    flex-direction: column;
+    gap: 20vh;
   }
   &__title {
     width: 100%;
     @include utilities.flexbox-params(flex, center, center);
     gap: 2rem;
     &Img {
-      width: 8rem;
-      height: 8rem;
+      width: 7rem;
+      height: 7rem;
       border: 1px solid colors.$border-default;
       border-radius: 50%;
       @include utilities.flexbox-params(flex, center, center);
     }
   }
   &__description,
-  &__hobbies {
+  &__hobbies,
+  &__skills {
     width: 100%;
     min-height: 600px;
+    // position: relative;
+    // top: 2;
+    & h1 {
+      text-align: center;
+    }
   }
   &__description {
     padding-top: 6rem;
@@ -36,15 +46,66 @@
     }
     & p {
       font-size: 22px;
-      z-index: 1;
       margin: 0;
       width: 100%;
       max-width: 65rem;
-      transition: all 0.7s ease-in-out;
+      transition: all 0.6s ease-in-out;
       text-align: justify;
     }
   }
   &__hobbies {
-    border: 1px solid green;
+    &Cards {
+      width: 100%;
+      // position: relative;
+      margin-top: 6rem;
+      display: grid;
+      @include utilities.grid-params(
+        grid,
+        repeat(auto-fit, minmax(10rem, 20rem)),
+        3rem,
+        3rem
+      );
+      justify-content: center;
+      @include breakpoints.small {
+        gap: 2rem;
+      }
+    }
+    &Image {
+      width: 14rem;
+      margin: 0 auto;
+      & > img {
+        width: 100%;
+      }
+    }
+    &Description {
+      margin-top: 3rem;
+    }
+  }
+  &__skills {
+    &Container {
+      padding: 10rem 0 20rem 0;
+    }
+    &Parallax {
+      overflow: hidden;
+      letter-spacing: -2px;
+      line-height: 0.8;
+      margin-bottom: 5rem;
+      white-space: nowrap;
+      display: flex;
+      flex-wrap: nowrap;
+    }
+    &Scroller {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 200px;
+      display: flex;
+      white-space: nowrap;
+      display: flex;
+      flex-wrap: nowrap;
+      & > span {
+        display: block;
+        margin-right: 30px;
+      }
+    }
   }
 }
