@@ -14,31 +14,31 @@ export function Header() {
     }
   }, [breakpoint]);
 
+  const variants = {
+    hidden: {
+      y: -200,
+    },
+    visible: {
+      y: 0,
+      transition: { type: "spring", duration: 1.5, delay: 0.3 },
+    },
+  };
+
   return (
-    <>
-      <header className={classes.header}>
-        <div className={classes.header__container}>
-          <Logo />
+    <header className={classes.header}>
+      <div className={classes.header__container}>
+        <Logo />
 
-          <Links show={show} setShow={setShow} />
+        <Links show={show} setShow={setShow} />
 
-          <motion.div
-            initial={{
-              y: -200,
-            }}
-            animate={{
-              y: 0,
-              transition: { type: "spring", duration: 1.5, delay: 0.3 },
-            }}
-          >
-            <div className={classes.header__options}>
-              <ToggleMode />
-              <Player />
-              <MenuIcon show={show} setShow={setShow} />
-            </div>
-          </motion.div>
-        </div>
-      </header>
-    </>
+        <motion.div initial="hidden" animate="visible" variants={variants}>
+          <div className={classes.header__options}>
+            <ToggleMode />
+            <Player />
+            <MenuIcon show={show} setShow={setShow} />
+          </div>
+        </motion.div>
+      </div>
+    </header>
   );
 }

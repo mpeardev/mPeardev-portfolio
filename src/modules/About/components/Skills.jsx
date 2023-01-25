@@ -1,4 +1,4 @@
-import { Content, PageContainer } from "/src/ui/components";
+import { PageContainer } from "/src/ui/components";
 import classes from "../about.module.scss";
 import { SubtitlesAbout, SkillsImages } from ".";
 

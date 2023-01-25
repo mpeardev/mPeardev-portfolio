@@ -2,7 +2,7 @@ import anime from "animejs/lib/anime.es.js";
 import { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { MdHeadphones } from "/src/ui/icons";
 import classes from "./player.module.scss";
-import music from "/src/assets/mp3/set.mp3";
+import music from "/src/assets/mp3/ocean-jams.mp3";
 
 const ticks = Array.from(Array(8));
 

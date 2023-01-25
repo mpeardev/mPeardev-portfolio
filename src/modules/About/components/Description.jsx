@@ -1,15 +1,22 @@
+import { useContext } from "react";
 import classes from "../about.module.scss";
 import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
 import { Content, PageContainer } from "../../../ui/components";
 import { TitlePage } from ".";
+import BreakpointContext from "../../../state/breakpoint/BreakpointContext";
 
 export function Description() {
-  const scrollAmount = 700;
+  const { breakpoint } = useContext(BreakpointContext);
 
+  const scrollAmount = 700;
   const { scrollY } = useScroll();
   const opacity = useTransform(scrollY, [0, scrollAmount], [1, 0]);
-  const scale = useTransform(scrollY, [0, scrollAmount], [1, 1.2]);
+  const scale = useTransform(
+    scrollY,
+    [0, scrollAmount],
+    [1, breakpoint <= 768 ? 1 : 1.2]
+  );
   const y = useTransform(scrollY, [0, scrollAmount], [0, 80]);
 
   const variants = {
