@@ -112,6 +112,13 @@
       }
       & img {
         width: 20rem;
+        margin-left: 1rem;
+        filter: brightness(0.8);
+        opacity: 0.9;
+        &:hover {
+          opacity: 1;
+          filter: brightness(1);
+        }
         @include breakpoints.medium {
           width: 10rem;
         }
