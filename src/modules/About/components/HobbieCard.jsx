@@ -5,8 +5,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 export function HobbieCard({ title, image, description, index }) {
   const imageVariants = {
     float: ({ delay }) => ({
-      x: 5,
-      y: -3,
       y: 10,
       x: -25,
       transition: {

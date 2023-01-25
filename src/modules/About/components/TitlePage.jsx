@@ -2,8 +2,12 @@ import { Title } from "../../../ui/components";
 import { TiUser } from "../../../ui/icons";
 import classes from "../about.module.scss";
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import BreakpointContext from "../../../state/breakpoint/BreakpointContext";
 
 export function TitlePage() {
+  const { breakpoint } = useContext(BreakpointContext);
+
   const variants = {
     start: {
       opacity: 0,
@@ -26,10 +30,10 @@ export function TitlePage() {
     >
       <div className={`theme-blur-bg ${classes.about__titleImg}`}>
         <div>
-          <TiUser size="6em" />
+          <TiUser size={breakpoint <= 768 ? "3em" : "6em"} />
         </div>
       </div>
-      <Title title={"Sobre mi"} size="80px" />
+      <Title title={"Sobre mi"} size={breakpoint <= 768 ? "50px" : "75px"} />
     </motion.div>
   );
 }

@@ -81,7 +81,6 @@ export function SkillsImages() {
               key={i}
               src={skill.image}
               alt={`image-${skill.name}`}
-              style={{ width: "20rem" }}
               title={skill.name}
             />
           );
@@ -94,7 +93,6 @@ export function SkillsImages() {
               key={i}
               src={skill.image}
               alt={`image-${skill.name}`}
-              style={{ width: "20rem" }}
               title={skill.name}
             />
           );

@@ -1,7 +1,7 @@
 import classes from "../about.module.scss";
 import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
-import { PageContainer } from "../../../ui/components";
+import { Content, PageContainer } from "../../../ui/components";
 import { TitlePage } from ".";
 
 export function Description() {
@@ -30,24 +30,26 @@ export function Description() {
   return (
     <section className={classes.about__description}>
       <PageContainer>
-        <TitlePage />
-        <motion.p
-          initial="hidden"
-          animate="visible"
-          variants={variants}
-          style={{ opacity, scale, y }}
-        >
-          Soy un desarrollador de software ubicado en Perú. Cuento con
-          experiencia trabajando con diferentes tecnologías web siendo mi
-          especialidad el desarrollo frontend de aplicaciones e interfaces,
-          añadiendo en todos mis proyectos la mejor calidad y logrando
-          experiencias de usuarios óptimas en base a los requerimientos y
-          solicitudes brindadas. <br />
-          Me caracterizo por ser una persona perserverante, encontrándome en
-          constante y permanente aprendizaje para estar siempre actualizado con
-          las últimas novedades, tecnologías y poder añadirle el mayor valor
-          posible a mis proyectos.
-        </motion.p>
+        <Content>
+          <TitlePage />
+          <motion.p
+            initial="hidden"
+            animate="visible"
+            variants={variants}
+            style={{ opacity, scale, y }}
+          >
+            Soy un desarrollador de software ubicado en Perú. Cuento con
+            experiencia trabajando con diferentes tecnologías web siendo mi
+            especialidad el desarrollo frontend de aplicaciones e interfaces,
+            añadiendo en todos mis proyectos la mejor calidad y logrando
+            experiencias de usuarios óptimas en base a los requerimientos y
+            solicitudes brindadas. <br />
+            Me caracterizo por ser una persona perserverante, encontrándome en
+            constante y permanente aprendizaje para estar siempre actualizado
+            con las últimas novedades, tecnologías y poder añadirle el mayor
+            valor posible a mis proyectos.
+          </motion.p>
+        </Content>
       </PageContainer>
     </section>
   );

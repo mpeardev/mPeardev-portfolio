@@ -24,6 +24,10 @@
       border: 1px solid colors.$border-default;
       border-radius: 50%;
       @include utilities.flexbox-params(flex, center, center);
+      @include breakpoints.medium {
+        width: 5.5rem;
+        height: 5.5rem;
+      }
     }
   }
   &__description,
@@ -31,43 +35,42 @@
   &__skills {
     width: 100%;
     min-height: 600px;
-    // position: relative;
-    // top: 2;
+    position: relative;
+    top: 2;
     & h1 {
       text-align: center;
     }
   }
   &__description {
     padding-top: 6rem;
-    & > div {
-      @include utilities.flexbox-params(flex, center, flex-start);
-      flex-direction: column;
-      gap: 3.5rem;
-    }
+
     & p {
-      font-size: 22px;
-      margin: 0;
+      font-size: 20px;
+      margin: 0 auto;
+      padding-top: 6rem;
       width: 100%;
       max-width: 65rem;
       transition: all 0.6s ease-in-out;
       text-align: justify;
+      @include breakpoints.medium {
+        font-size: 17px;
+      }
     }
   }
   &__hobbies {
     &Cards {
       width: 100%;
-      // position: relative;
       margin-top: 6rem;
       display: grid;
       @include utilities.grid-params(
         grid,
         repeat(auto-fit, minmax(10rem, 20rem)),
         3rem,
-        3rem
+        6rem
       );
       justify-content: center;
       @include breakpoints.small {
-        gap: 2rem;
+        gap: 4rem;
       }
     }
     &Image {
@@ -76,14 +79,25 @@
       & > img {
         width: 100%;
       }
+      @include breakpoints.medium {
+        width: 10rem;
+      }
     }
     &Description {
       margin-top: 3rem;
+      @include breakpoints.medium {
+        & p {
+          font-size: 12px;
+        }
+      }
     }
   }
   &__skills {
     &Container {
       padding: 10rem 0 20rem 0;
+      @include breakpoints.medium {
+        padding-bottom: 10rem;
+      }
     }
     &Parallax {
       overflow: hidden;
@@ -93,6 +107,15 @@
       white-space: nowrap;
       display: flex;
       flex-wrap: nowrap;
+      @include breakpoints.medium {
+        margin-bottom: 3rem;
+      }
+      & img {
+        width: 20rem;
+        @include breakpoints.medium {
+          width: 10rem;
+        }
+      }
     }
     &Scroller {
       font-weight: 600;

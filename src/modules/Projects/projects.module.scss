@@ -58,10 +58,13 @@
       width: 100%;
       max-width: 100rem;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(10rem, 30rem));
+      @include utilities.grid-params(
+        grid,
+        repeat(auto-fit, minmax(10rem, 30rem)),
+        3rem,
+        3rem
+      );
       grid-auto-rows: 25rem;
-      gap: 3rem;
       justify-content: center;
       @include breakpoints.medium {
         grid-auto-rows: 20rem;
