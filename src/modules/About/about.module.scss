@@ -42,6 +42,15 @@
       text-align: center;
     }
   }
+  &__hobbies,
+  &__skills {
+    & h1 {
+      margin-bottom: 5rem;
+      @include breakpoints.medium {
+        margin-bottom: 2rem;
+      }
+    }
+  }
   &__description {
     padding: 6rem 4% 0 4%;
     & p {
@@ -63,7 +72,7 @@
   &__hobbies {
     &Cards {
       width: 100%;
-      margin-top: 6rem;
+      // margin-top: 6rem;
       display: grid;
       @include utilities.grid-params(
         grid,
@@ -95,9 +104,9 @@
   }
   &__skills {
     &Container {
-      padding: 10rem 0 20rem 0;
+      // padding: 10rem 0 20rem 0;
       @include breakpoints.medium {
-        padding-bottom: 10rem;
+        // padding-bottom: 10rem;
       }
     }
     &Parallax {
@@ -110,7 +119,6 @@
       flex-wrap: nowrap;
       @include breakpoints.large {
         margin-bottom: 0;
-        border: 1px solid;
       }
       & img {
         width: 12rem;

@@ -104,13 +104,6 @@
   }
 }
 
-// Modals
-.theme-modal-bg {
-  @include themed() {
-    background: t("modal-bg");
-  }
-}
-
 // Menu Responsive
 .theme-menu-bg {
   @include themed() {

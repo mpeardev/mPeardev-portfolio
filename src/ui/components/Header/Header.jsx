@@ -3,10 +3,19 @@ import { motion } from "framer-motion";
 import classes from "./header.module.scss";
 import { Logo, Links, ToggleMode, Player, MenuIcon } from "./components";
 import BreakpointContext from "../../../state/breakpoint/BreakpointContext";
+import { disableScroll, enableScroll } from "/src/helpers/enableDisableScroll";
 
 export function Header() {
   const [show, setShow] = useState();
   const { breakpoint } = useContext(BreakpointContext);
+
+  useEffect(() => {
+    if (show) {
+      disableScroll();
+    } else {
+      enableScroll();
+    }
+  }, [show]);
 
   useEffect(() => {
     if (breakpoint > 640) {

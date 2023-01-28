@@ -10,7 +10,7 @@ import {
 } from "framer-motion";
 import { wrap } from "@motionone/utils";
 import classes from "../about.module.scss";
-import skills from "../data/skills.json";
+import skills from "/src/data/skills.json";
 
 function ParallaxImages({ children, baseVelocity = 100 }) {
   const baseX = useMotionValue(0);
@@ -70,7 +70,7 @@ function ParallaxImages({ children, baseVelocity = 100 }) {
 }
 
 export function SkillsImages() {
-  const firstImgGroup = skills.slice(0, 6);
+  const firstImgGroup = skills.slice(0, 7);
   const secondImgGroup = skills.slice(7, 14);
   return (
     <section className={classes.about__skillsContainer}>

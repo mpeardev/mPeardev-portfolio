@@ -1,7 +1,7 @@
 import { Content, PageContainer } from "/src/ui/components";
 import classes from "../about.module.scss";
 import { HobbieCard, SubtitlesAbout } from ".";
-import hobbies from "../data/hobbies.json";
+import hobbies from "/src/data/hobbies.json";
 
 export function Hobbies() {
   return (

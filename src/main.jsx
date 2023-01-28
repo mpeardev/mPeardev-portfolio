@@ -8,15 +8,15 @@ import { ThemeProvider } from "./state/theme/ThemeProvider";
 import "./styles/main.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  // <React.StrictMode>
-  <BrowserRouter>
-    <BreakpointProvider>
-      <ThemeProvider>
-        <ProjectsProvider>
-          <MPeardevApp />
-        </ProjectsProvider>
-      </ThemeProvider>
-    </BreakpointProvider>
-  </BrowserRouter>
-  // </React.StrictMode>
+  <React.StrictMode>
+    <BrowserRouter>
+      <BreakpointProvider>
+        <ThemeProvider>
+          <ProjectsProvider>
+            <MPeardevApp />
+          </ProjectsProvider>
+        </ThemeProvider>
+      </BreakpointProvider>
+    </BrowserRouter>
+  </React.StrictMode>
 );
