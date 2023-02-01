@@ -69,18 +69,15 @@
     gap: 3rem;
     flex-direction: column;
     @include breakpoints.medium {
+      width: 100%;
       height: auto;
-      left: 10%;
+      left: 0;
       top: auto;
       bottom: 4rem;
-      @include utilities.flexbox-params(flex, flex-end, flex-end);
+      padding: 0;
+      @include utilities.flexbox-params(flex, auto, center);
       flex-direction: row;
       gap: 1rem;
-    }
-    @include breakpoints.x-small {
-      width: 100%;
-      @include utilities.flexbox-params(flex, auto, center);
-      left: 0;
     }
   }
   &__footer {
@@ -92,8 +89,6 @@
     @include utilities.flexbox-params(flex, center, space-between);
     @include breakpoints.medium {
       font-size: 9px;
-    }
-    @include breakpoints.x-small {
       flex-direction: column;
     }
   }

@@ -1,6 +1,6 @@
 import { Subtitle } from "/src/ui/components";
 import classes from "../about.module.scss";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 export function HobbieCard({ title, image, description, index }) {
   const imageVariants = {

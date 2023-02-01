@@ -69,6 +69,7 @@
     padding: 4%;
     @include utilities.flexbox-params(flex, auto, space-between);
     flex-direction: column;
+    position: relative;
     @include breakpoints.medium {
       height: 6rem;
     }
@@ -76,6 +77,18 @@
       width: 100%;
       height: auto;
       @include utilities.grid-params(grid, 1.5fr 0.5fr, 1rem, auto);
+    }
+    &Status {
+      position: absolute;
+      top: -10%;
+      right: 3%;
+      background: #b70c0c;
+      padding: 0.2rem 0.5rem;
+      font-size: 11px;
+      border-radius: 10px;
+      text-align: center;
+      color: #fff;
+      letter-spacing: 0;
     }
     &Tech {
       @include utilities.flexbox-params(flex, auto, auto);

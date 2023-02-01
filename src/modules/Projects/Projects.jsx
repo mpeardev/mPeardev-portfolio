@@ -1,31 +1,33 @@
 import { useContext, useEffect, useState } from "react";
-import ProjectsContext from "../../state/projects/ProjectsContext";
+import DataContext from "../../state/data/DataContext";
 import { PageContainer } from "../../ui/components";
 import { ProjectsGallery, Sidebar, ShowIcon } from "./components";
 import classes from "./projects.module.scss";
 
 export function Projects() {
-  const { projects } = useContext(ProjectsContext);
+  const { data } = useContext(DataContext);
 
   const [hiddenSidebar, setHiddenSidebar] = useState(true);
 
-  const [projectsArr, setProjectsArr] = useState(projects);
+  const [projectsArr, setProjectsArr] = useState(data?.projects);
   const [categoriesArr, setCategoriesArr] = useState([]);
 
   const filterProjects = (p) => {
-    const filtered = projects.filter(({ category }) => category === p);
+    const filtered = data.projects.filter(({ category }) => category === p);
     setProjectsArr(filtered);
   };
 
-  projects.map((e) => {
-    return categoriesArr.push(e.category);
-  });
+  if (data) {
+    data.projects?.map((e) => {
+      return categoriesArr.push(e.category);
+    });
+  }
 
   const impButtons = [...new Set(categoriesArr)];
 
   useEffect(() => {
-    setProjectsArr(projects);
-  }, [projects]);
+    setProjectsArr(data.projects);
+  }, [data]);
 
   return (
     <>

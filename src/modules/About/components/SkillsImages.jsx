@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import {
   motion,
   useScroll,
@@ -10,7 +10,9 @@ import {
 } from "framer-motion";
 import { wrap } from "@motionone/utils";
 import classes from "../about.module.scss";
-import skills from "/src/data/skills.json";
+import { useContext } from "react";
+import DataContext from "../../../state/data/DataContext";
+import { useEffect } from "react";
 
 function ParallaxImages({ children, baseVelocity = 100 }) {
   const baseX = useMotionValue(0);
@@ -70,12 +72,23 @@ function ParallaxImages({ children, baseVelocity = 100 }) {
 }
 
 export function SkillsImages() {
-  const firstImgGroup = skills.slice(0, 7);
-  const secondImgGroup = skills.slice(7, 14);
+  const { data } = useContext(DataContext);
+  const [firstArr, setFirstArr] = useState([]);
+  const [secondArr, setSecondArr] = useState([]);
+
+  useEffect(() => {
+    if (data) {
+      const divide = Math.round(data.skills?.length / 2);
+
+      setFirstArr(data.skills?.slice(0, divide));
+      setSecondArr(data.skills?.slice(divide, data.skills?.length));
+    }
+  }, [data]);
+
   return (
     <section className={classes.about__skillsContainer}>
       <ParallaxImages baseVelocity={-1}>
-        {firstImgGroup.map((skill, i) => {
+        {firstArr?.map((skill, i) => {
           return (
             <img
               key={i}
@@ -87,7 +100,7 @@ export function SkillsImages() {
         })}
       </ParallaxImages>
       <ParallaxImages baseVelocity={1}>
-        {secondImgGroup.map((skill, i) => {
+        {secondArr?.map((skill, i) => {
           return (
             <img
               key={i}

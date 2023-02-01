@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useContext } from "react";
 import BreakpointContext from "../../../../state/breakpoint/BreakpointContext";
 
-export function Card({ title, tech, repo, deploy, image, index }) {
+export function Card({ title, tech, repo, deploy, image, status, index }) {
   const { breakpoint } = useContext(BreakpointContext);
 
   const variants = {
@@ -41,6 +41,7 @@ export function Card({ title, tech, repo, deploy, image, index }) {
         <div className={classes.card__info}>
           <Title title={title} size={breakpoint <= 768 ? "18px" : "24px"} />
           <div>
+            {status && <div className={classes.card__infoStatus}>{status}</div>}
             <div className={classes.card__infoTech}>
               {tech.map((e, i) => {
                 return <p key={i}>{e.concat(" |")}</p>;

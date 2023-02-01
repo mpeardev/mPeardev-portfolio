@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import BreakpointContext from "../../../state/breakpoint/BreakpointContext";
-import ProjectsContext from "../../../state/projects/ProjectsContext";
+import ProjectsContext from "../../../state/data/DataContext";
 import classes from "../projects.module.scss";
 import { Secondary } from "/src/ui/components";
 
@@ -10,7 +10,7 @@ export function FilterButtons({
   setProjectsArr,
   setHiddenSidebar,
 }) {
-  const { projects } = useContext(ProjectsContext);
+  const { data } = useContext(ProjectsContext);
   const { breakpoint } = useContext(BreakpointContext);
 
   const formatButton = () => {
@@ -29,7 +29,7 @@ export function FilterButtons({
   useEffect(() => {
     formatButton();
     selectButton("todos");
-  }, [projects]);
+  }, [data]);
 
   const buttonClick = () => {
     setHiddenSidebar(true);
@@ -46,7 +46,7 @@ export function FilterButtons({
         name="todos"
         size={breakpoint <= 1024 ? "lg" : "xl"}
         onClick={() => {
-          setProjectsArr(projects);
+          setProjectsArr(data.projects);
           selectButton("todos");
           buttonClick();
         }}
