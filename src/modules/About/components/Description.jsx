@@ -9,7 +9,7 @@ import BreakpointContext from "../../../state/breakpoint/BreakpointContext";
 export function Description() {
   const { breakpoint } = useContext(BreakpointContext);
 
-  const scrollAmount = 700;
+  const scrollAmount = 500;
   const { scrollY } = useScroll();
   const opacity = useTransform(scrollY, [0, scrollAmount], [1, 0]);
   const scale = useTransform(
@@ -45,16 +45,17 @@ export function Description() {
             variants={variants}
             style={{ opacity, scale, y }}
           >
-            Soy un desarrollador de software ubicado en Perú. Cuento con
-            experiencia trabajando con diferentes tecnologías web siendo mi
-            especialidad el desarrollo frontend de aplicaciones e interfaces,
-            añadiendo en todos mis proyectos la mejor calidad y logrando
-            experiencias de usuarios óptimas en base a los requerimientos y
-            solicitudes brindadas. <br />
-            Me caracterizo por ser una persona perserverante, encontrándome en
-            constante y permanente aprendizaje para estar siempre actualizado
-            con las últimas novedades, tecnologías y poder añadirle el mayor
-            valor posible a mis proyectos.
+            Soy un desarrollador de software ubicado en Perú. Tengo experiencia
+            trabajando con diversas tecnologías web, especializándome en el
+            desarrollo frontend de aplicaciones e interfaces. En todos mis
+            proyectos, me esfuerzo por añadir la mayor calidad posible y crear
+            experiencias óptimas para los usuarios, adaptándome a sus
+            requerimientos y necesidades específicas.
+            <br />
+            Me destaco por ser una persona perseverante, siempre en constante
+            aprendizaje y manteniéndome actualizado con las últimas novedades
+            tecnológicas, con el objetivo de aportar el mayor valor posible a
+            mis proyectos.
           </motion.p>
         </Content>
       </PageContainer>

@@ -76,3 +76,11 @@ $screen-xxl: 1920px;
     @content;
   }
 }
+
+// Landscape-lg
+@mixin landscape-large {
+  @media (orientation: landscape) and
+  (max-device-width: #{$screen-lg}) {
+    @content;
+  }
+}

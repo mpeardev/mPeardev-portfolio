@@ -18,13 +18,22 @@
     height: 100%;
     @include utilities.grid-params(grid, 1fr 1fr, auto, auto);
     align-items: center;
-    @include breakpoints.medium {
+    @include breakpoints.large {
       @include utilities.grid-params(grid, 1fr, auto, auto);
     }
   }
   &__about {
     width: 100%;
     margin-top: -10%;
+    @include breakpoints.large{
+      padding: 10%;
+      }
+      @include breakpoints.medium{
+        padding: 0;
+        }
+          @include breakpoints.landscape-large{
+            padding-top: 20%;
+            }
     & h3 {
       margin-top: 0.5rem;
       @include breakpoints.medium {
@@ -68,7 +77,7 @@
     @include utilities.flexbox-params(flex, center, center);
     gap: 3rem;
     flex-direction: column;
-    @include breakpoints.medium {
+    @include breakpoints.medium  {
       width: 100%;
       height: auto;
       left: 0;
@@ -95,7 +104,7 @@
   &__image {
     @include utilities.flexbox-params(flex, center, center);
     margin-bottom: 8%;
-    @include breakpoints.medium {
+    @include breakpoints.large {
       display: none;
     }
     & svg {

@@ -123,17 +123,3 @@
     background: t("card-bg");
   }
 }
-
-.scroll-design {
-  overflow: overlay;
-  &::-webkit-scrollbar {
-    width: 4px;
-  }
-  &::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: #a7a0a1;
-  }
-  &::-webkit-scrollbar-button {
-    display: none;
-  }
-}

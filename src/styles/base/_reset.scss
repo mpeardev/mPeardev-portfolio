@@ -7,6 +7,7 @@ html,
 body {
   margin: 0;
   box-sizing: border-box;
+  scrollbar-color: #9e9e9e transparent;
 }
 
 body {
@@ -14,8 +15,6 @@ body {
   letter-spacing: 2px;
   font-family: typography.$secondary20;
   user-select: none;
-  scroll-behavior: smooth;
-  overflow: overlay;
 }
 
 input,
@@ -36,19 +35,4 @@ a:visited {
 a {
   cursor: pointer;
   transition: 0.4s;
-}
-
-// CUSTOM-SCROLLBAR
-body::-webkit-scrollbar {
-  width: 4px;
-}
-// body::-webkit-scrollbar-track {
-//   background: #ffffff;
-// }
-body::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: #a7a0a1;
-}
-body::-webkit-scrollbar-button {
-  display: none;
 }
