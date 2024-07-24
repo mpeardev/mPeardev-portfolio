@@ -8,18 +8,6 @@ export function Buttons() {
   const { breakpoint } = useContext(BreakpointContext);
   const navigate = useNavigate();
 
-  const onPDFButtonClick = () => {
-    fetch("/pdf/Mirko_Peramas_CV.pdf").then((response) => {
-      response.blob().then((blob) => {
-        const fileURL = window.URL.createObjectURL(blob);
-        let alink = document.createElement("a");
-        alink.href = fileURL;
-        alink.download = "/Mirko_Peramas_CV.pdf";
-        alink.click();
-      });
-    });
-  };
-
   return (
     <>
       <div className={classes.home__aboutButtons}>
@@ -34,7 +22,7 @@ export function Buttons() {
           <Secondary
             name="Descargar CV"
             size={breakpoint >= 1280 ? "xl" : breakpoint >= 768 ? "lg" : "sm"}
-            onClick={onPDFButtonClick}
+            href="https://firebasestorage.googleapis.com/v0/b/mpeardev-portfolio.appspot.com/o/Mirko_Peramas_CV.pdf?alt=media&token=945be9d1-ee43-4d9c-97a7-8e057531c64a"
           />
         </div>
       </div>

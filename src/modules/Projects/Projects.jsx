@@ -1,50 +1,47 @@
 import { useContext, useEffect, useState } from "react";
 import DataContext from "../../state/data/DataContext";
-import { PageContainer } from "../../ui/components";
-import { ProjectsGallery, Sidebar, ShowIcon } from "./components";
+import { Content, PageContainer } from "../../ui/components";
+import { ProjectsGallery } from "./components";
 import classes from "./projects.module.scss";
+import { TitlePage } from "./components/TitlePage";
 
 export function Projects() {
   const { data } = useContext(DataContext);
 
-  const [hiddenSidebar, setHiddenSidebar] = useState(true);
-
-  const [projectsArr, setProjectsArr] = useState(data?.projects);
-  const [categoriesArr, setCategoriesArr] = useState([]);
-
-  const filterProjects = (p) => {
-    const filtered = data.projects.filter(({ category }) => category === p);
-    setProjectsArr(filtered);
-  };
-
-  if (data) {
-    data.projects?.map((e) => {
-      return categoriesArr.push(e.category);
-    });
-  }
-
-  const impButtons = [...new Set(categoriesArr)];
+  const [projectsArr, setProjectsArr] = useState();
 
   useEffect(() => {
-    setProjectsArr(data.projects);
+    if (data.projects) {
+      // Copia de array
+      const shuffledProjects = [...data.projects];
+      // Función para mezclar aleatoriamente el array
+      shuffledProjects.sort(() => Math.random() - 0.5);
+      setProjectsArr(shuffledProjects);
+      return () => {
+        setProjectsArr(null);
+      };
+    }
   }, [data]);
+
+  // useEffect(() => {
+  //   setProjectsArr(data.projects);
+  // }, [data]);
 
   return (
     <>
       <div className={classes.projects}>
-        <PageContainer>
-          <div className={classes.projects__content}>
-            <ShowIcon onClick={() => setHiddenSidebar(!hiddenSidebar)} />
-            <Sidebar
-              impButtons={impButtons}
-              filterProjects={filterProjects}
-              setProjectsArr={setProjectsArr}
-              hiddenSidebar={hiddenSidebar}
-              setHiddenSidebar={setHiddenSidebar}
-            />
-            <ProjectsGallery projectsArr={projectsArr} />
-          </div>
-        </PageContainer>
+        <div className={classes.projects__content}>
+          <section className={classes.projects__description}>
+            <PageContainer>
+              <Content>
+                <TitlePage />
+                {projectsArr && projectsArr.length > 0 && (
+                  <ProjectsGallery projectsArr={projectsArr} />
+                )}
+              </Content>
+            </PageContainer>
+          </section>
+        </div>
       </div>
     </>
   );

@@ -3,11 +3,10 @@ import classes from "./buttons.module.scss";
 import { useButtonSize } from "../../hooks/useButtonSize";
 
 export function Secondary({
-  id = null,
-  className = null,
   name = "name",
   size,
   onClick = () => false,
+  href = null,
   children,
 }) {
   const { styleButton, applyButtonSize } = useButtonSize();
@@ -17,14 +16,28 @@ export function Secondary({
   }, [size]);
 
   return (
-    <button
-      id={id}
-      className={`theme-button-secondary theme-button-active ${className} ${classes.button} ${classes.secondary}`}
-      style={styleButton}
-      onClick={onClick}
-    >
-      {children}
-      {name}
-    </button>
+    <>
+      {!href && (
+        <button
+          className={`theme-button-secondary ${classes.button} ${classes.secondary}`}
+          style={styleButton}
+          onClick={onClick}
+        >
+          {children}
+          {name}
+        </button>
+      )}
+      {href && (
+        <a
+          href={href}
+          target="_blank"
+          className={`theme-button-secondary ${classes.button} ${classes.secondary}`}
+          style={styleButton}
+        >
+          {children}
+          {name}
+        </a>
+      )}
+    </>
   );
 }

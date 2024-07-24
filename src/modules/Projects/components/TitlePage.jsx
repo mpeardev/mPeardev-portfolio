@@ -1,5 +1,5 @@
 import { Title } from "../../../ui/components";
-import classes from "../about.module.scss";
+import classes from "../projects.module.scss";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import BreakpointContext from "../../../state/breakpoint/BreakpointContext";
@@ -25,14 +25,9 @@ export function TitlePage() {
       initial="start"
       animate="finish"
       variants={variants}
-      className={classes.about__title}
+      className={classes.projects__title}
     >
-      {/* <div className={`theme-blur-bg ${classes.about__titleImg}`}>
-        <div>
-          <TiUser size={breakpoint <= 768 ? "3em" : "6em"} />
-        </div>
-      </div> */}
-      <Title title={"Sobre mi"} size={breakpoint <= 768 ? "45px" : "65px"} />
+      <Title title={"Proyectos"} size={breakpoint <= 768 ? "45px" : "65px"} />
     </motion.div>
   );
 }

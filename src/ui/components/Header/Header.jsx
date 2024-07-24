@@ -37,9 +37,7 @@ export function Header() {
     <header className={classes.header}>
       <div className={classes.header__container}>
         <Logo />
-
         <Links show={show} setShow={setShow} />
-
         <motion.div initial="hidden" animate="visible" variants={variants}>
           <div className={classes.header__options}>
             <ToggleMode />

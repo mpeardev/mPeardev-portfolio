@@ -1,4 +1,4 @@
-import { Description, Hobbies, ParticlesBg, Skills } from "./components";
+import { Description, ParticlesBg, Skills } from "./components";
 import classes from "./about.module.scss";
 
 export function About() {
@@ -7,7 +7,6 @@ export function About() {
       <ParticlesBg />
       <div className={classes.about__content}>
         <Description />
-        <Hobbies />
         <Skills />
       </div>
     </div>

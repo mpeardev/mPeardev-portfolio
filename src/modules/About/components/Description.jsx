@@ -45,17 +45,17 @@ export function Description() {
             variants={variants}
             style={{ opacity, scale, y }}
           >
-            Soy un desarrollador de software ubicado en Perú. Tengo experiencia
-            trabajando con diversas tecnologías web, especializándome en el
-            desarrollo frontend de aplicaciones e interfaces. En todos mis
-            proyectos, me esfuerzo por añadir la mayor calidad posible y crear
-            experiencias óptimas para los usuarios, adaptándome a sus
-            requerimientos y necesidades específicas.
-            <br />
-            Me destaco por ser una persona perseverante, siempre en constante
-            aprendizaje y manteniéndome actualizado con las últimas novedades
-            tecnológicas, con el objetivo de aportar el mayor valor posible a
-            mis proyectos.
+            Soy un desarrollador de software con formación universitaria ubicado
+            en Perú, especializado en el desarrollo frontend de aplicaciones e
+            interfaces web. Me esfuerzo por ofrecer la mayor calidad en cada
+            proyecto, creando experiencias óptimas y adaptadas a las necesidades
+            específicas de los usuarios.
+            <br /> <br />
+            Me caracteriza la perseverancia y el compromiso con el aprendizaje
+            continuo, manteniéndome actualizado con las últimas tendencias
+            tecnológicas. Trabajo estrechamente con equipos de desarrollo,
+            siguiendo sus lineamientos y estándares para garantizar soluciones
+            de alto valor.
           </motion.p>
         </Content>
       </PageContainer>

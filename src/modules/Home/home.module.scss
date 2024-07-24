@@ -1,6 +1,5 @@
 @use "/src/styles/base/utilities" as utilities;
 @use "/src/styles/base/colors" as colors;
-@use "/src/styles/base/typography" as typography;
 @use "/src/styles//base/breakpoints" as breakpoints;
 
 .home {
@@ -25,15 +24,15 @@
   &__about {
     width: 100%;
     margin-top: -10%;
-    @include breakpoints.large{
+    @include breakpoints.large {
       padding: 10%;
-      }
-      @include breakpoints.medium{
-        padding: 0;
-        }
-          @include breakpoints.landscape-large{
-            padding-top: 20%;
-            }
+    }
+    @include breakpoints.medium {
+      padding: 0;
+    }
+    @include breakpoints.landscape-large {
+      padding-top: 20%;
+    }
     & h3 {
       margin-top: 0.5rem;
       @include breakpoints.medium {
@@ -77,7 +76,7 @@
     @include utilities.flexbox-params(flex, center, center);
     gap: 3rem;
     flex-direction: column;
-    @include breakpoints.medium  {
+    @include breakpoints.medium {
       width: 100%;
       height: auto;
       left: 0;

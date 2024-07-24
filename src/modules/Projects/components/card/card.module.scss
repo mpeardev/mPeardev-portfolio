@@ -1,15 +1,30 @@
 @use "/src/styles/base/colors" as colors;
 @use "/src/styles/base/utilities" as utilities;
 @use "/src/styles/base/breakpoints" as breakpoints;
+@use "/src/styles/base/typography" as typography;
+
+$heightCard: 22.3rem;
+$heightCardMedium: 21.5rem;
+
+$heightImageCard: 14rem;
+$heightImageCardMedium: 13.5rem;
+
+$heightDetailCard: 8.3rem;
+$heightDetailCardMedium: 8rem;
 
 .card {
   position: relative;
   border: 1px solid colors.$border-default;
   border-radius: 6px;
   width: 100%;
-  height: 25rem;
+  height: $heightCard;
+  text-align: start;
+  & > div:first-child {
+    border-radius: 5px;
+    overflow: hidden;
+  }
   @include breakpoints.medium {
-    height: 20rem;
+    height: $heightCardMedium;
   }
   @media (hover: hover) {
     &:hover {
@@ -34,6 +49,7 @@
       }
       & .card__image {
         filter: grayscale(0);
+        transform: scale(1.02);
       }
     }
     @keyframes animate {
@@ -54,48 +70,79 @@
   }
   &__image {
     width: 100%;
-    height: 18rem;
-    border-radius: 5px;
+    height: $heightImageCard;
+
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     filter: grayscale(0.7);
+    transition: 0.4s;
     @include breakpoints.medium {
-      height: 14rem;
+      height: $heightImageCardMedium;
     }
   }
   &__info {
     width: 100%;
-    height: 7rem;
+    height: $heightDetailCard;
     padding: 4%;
     @include utilities.flexbox-params(flex, auto, space-between);
     flex-direction: column;
     position: relative;
     @include breakpoints.medium {
-      height: 6rem;
+      height: $heightDetailCardMedium;
+    }
+    &Main {
+      // border: 1px solid red;
+      @include utilities.grid-params(grid, 1.8fr 0.2fr, auto, auto);
+      // @include utilities.flexbox-params(flex, center, auto);
+      & > div {
+        width: 100%;
+      }
+
+      & img {
+        height: 2rem;
+      }
+    }
+    &Company {
+      font-size: 12px;
+      margin-bottom: 12px;
+      margin-top: 0.08rem;
+      @include breakpoints.medium {
+        font-size: 9px;
+        margin-bottom: 10px;
+      }
     }
     & > div:last-child {
       width: 100%;
       height: auto;
+      min-height: 28.5px;
       @include utilities.grid-params(grid, 1.5fr 0.5fr, 1rem, auto);
+      @include breakpoints.medium {
+        min-height: 22px;
+      }
     }
     &Status {
       position: absolute;
       top: -10%;
       right: 3%;
-      background: #b70c0c;
+      min-width: 5rem;
+      background-color: #c2fbd7;
+      box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
+        rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
+        rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
+        rgba(44, 187, 99, 0.15) 0 16px 32px;
       padding: 0.2rem 0.5rem;
       font-size: 11px;
       border-radius: 10px;
       text-align: center;
-      color: #fff;
+      color: green;
       letter-spacing: 0;
     }
     &Tech {
       @include utilities.flexbox-params(flex, auto, auto);
       flex-wrap: wrap;
       & > p {
-        font-size: 12px;
+        font-size: 9px;
         text-transform: capitalize;
         @include breakpoints.medium {
           font-size: 8px;

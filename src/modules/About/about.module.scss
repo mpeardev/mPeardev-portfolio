@@ -5,7 +5,6 @@
 .about {
   width: 100%;
   position: relative;
-  overflow-y: scroll;
   &__content {
     width: 100%;
     height: auto;
@@ -24,6 +23,7 @@
       height: 7rem;
       border: 1px solid colors.$border-default;
       border-radius: 50%;
+      overflow: hidden;
       @include utilities.flexbox-params(flex, center, center);
       @include breakpoints.medium {
         width: 5.5rem;
@@ -32,7 +32,6 @@
     }
   }
   &__description,
-  &__hobbies,
   &__skills {
     width: 100%;
     min-height: 600px;
@@ -40,15 +39,6 @@
     top: 2;
     & h1 {
       text-align: center;
-    }
-  }
-  &__hobbies,
-  &__skills {
-    & h1 {
-      margin-bottom: 5rem;
-      @include breakpoints.medium {
-        margin-bottom: 2rem;
-      }
     }
   }
   &__description {
@@ -68,40 +58,13 @@
       }
     }
   }
-  &__hobbies {
-    &Cards {
-      width: 100%;
-      // margin-top: 6rem;
-      display: grid;
-      @include utilities.grid-params(
-        grid,
-        repeat(auto-fit, minmax(10rem, 20rem)),
-        3rem,
-        6rem
-      );
-      justify-content: center;
-    }
-    &Image {
-      width: 14rem;
-      margin: 0 auto;
-      & > img {
-        width: 100%;
-      }
-      @include breakpoints.medium {
-        width: 10rem;
-      }
-    }
-    &Description {
-      margin-top: 3rem;
-      @include breakpoints.medium {
-        margin-top: 0;
-        & p {
-          font-size: 12px;
-        }
-      }
-    }
-  }
   &__skills {
+    & h1 {
+      margin-bottom: 5rem;
+      @include breakpoints.medium {
+        margin-bottom: 2rem;
+      }
+    }
     &Container {
       // padding: 10rem 0 20rem 0;
       @include breakpoints.medium {
